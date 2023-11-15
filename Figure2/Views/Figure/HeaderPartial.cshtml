@@ -1,0 +1,77 @@
+﻿
+@model Figure2.Models.Product
+<section id="header">
+    <a href="#">
+        <img src="~/img/logo.png" class="logo">
+    </a>
+    <div>
+        <ul id="navbar">
+            <li>
+                <a class="active" href="~/Figure/Index">Trang Chủ</a>
+            </li>
+            <li>
+                <a href="about.html">Giới thiệu</a>
+            </li>
+            <li>
+                @Html.Action("ItemPatrial", "Figure")
+            </li>
+
+            <li>
+                <a href="blog.html">Hướng dẫn</a>
+            </li>
+            <li>
+                <a href="contact.html">Liên hệ</a>
+            </li>
+            <li>
+                @using (Html.BeginForm("TimKiem", "TimKiem", FormMethod.Get, new { @class = "navbar-form navbar-right", @role = "search" }))
+                {
+
+
+                    <input type="text" class="form-control" placeholder="Tìm kiếm" name="strSearch">
+
+                    <button type="submit" class="btn btn-default">Tìm</button>
+
+                }
+            </li>
+
+        </ul>
+
+       
+
+
+        <ul id="navbar1">
+            @if (Session["TaiKhoan"] != null)
+            {
+                <li>
+                    <a>Xin chào:(^-^) @Session["HoTen"].ToString()</a>
+                </li>
+
+                <li>
+                    <button class="btnLogout-popup">
+                        <a href="~/User/DangXuat">Đăng xuất</a>
+                    </button>
+                </li>
+            }
+            else
+            {
+
+                <li>
+                    <button class="btnLogin-popup">
+                        <a href="~/User/DangNhap">Đăng nhập</a>
+                    </button>
+                </li>
+
+
+
+            }
+
+            <li id="lg-bag">
+                @Html.Action("GioHangPartial", "GioHang")
+            </li>
+
+
+            <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+    </div>
+    
+</section>

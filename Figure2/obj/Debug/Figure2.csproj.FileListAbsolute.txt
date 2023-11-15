@@ -1,0 +1,403 @@
+E:\do an\Web\source code\Figure2\Figure2\bin\Figure2.dll.config
+E:\do an\Web\source code\Figure2\Figure2\bin\Figure2.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\Figure2.pdb
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csc.exe
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csc.exe.config
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csc.rsp
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csi.exe
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csi.exe.config
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csi.rsp
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.Managed.Core.targets
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.AppContext.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Collections.Immutable.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Console.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Globalization.Calendars.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.Compression.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.FileSystem.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Net.Http.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Net.Sockets.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Reflection.Metadata.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.ValueTuple.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.XmlDocument.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.XPath.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\vbc.exe
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\vbc.exe.config
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\vbc.rsp
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\VBCSCompiler.exe
+E:\do an\Web\source code\Figure2\Figure2\bin\roslyn\VBCSCompiler.exe.config
+E:\do an\Web\source code\Figure2\Figure2\bin\Antlr3.Runtime.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\Microsoft.Web.Infrastructure.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\Newtonsoft.Json.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Helpers.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Mvc.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Optimization.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Razor.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Deployment.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Razor.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\WebGrease.dll
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Helpers.xml
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Mvc.xml
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Optimization.xml
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Razor.xml
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.xml
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Deployment.xml
+E:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Razor.xml
+E:\do an\Web\source code\Figure2\Figure2\bin\Newtonsoft.Json.xml
+E:\do an\Web\source code\Figure2\Figure2\bin\Antlr3.Runtime.pdb
+E:\do an\Web\source code\Figure2\Figure2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.csproj.AssemblyReference.cache
+E:\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.csproj.CoreCompileInputs.cache
+E:\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.csproj.CopyComplete
+E:\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.dll
+E:\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.pdb
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\Figure2.dll.config
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\Figure2.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\Figure2.pdb
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\csc.exe
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\csc.exe.config
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\csc.rsp
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\csi.exe
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\csi.exe.config
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\csi.rsp
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.Managed.Core.targets
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.Win32.Primitives.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.AppContext.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Collections.Immutable.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Console.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Globalization.Calendars.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.Compression.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.Compression.ZipFile.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.FileSystem.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Net.Http.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Net.Sockets.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Reflection.Metadata.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Threading.Tasks.Extensions.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.ValueTuple.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.XmlDocument.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.XPath.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\vbc.exe
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\vbc.exe.config
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\vbc.rsp
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\VBCSCompiler.exe
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\roslyn\VBCSCompiler.exe.config
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\Antlr3.Runtime.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\Microsoft.Web.Infrastructure.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\Newtonsoft.Json.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.Helpers.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.Mvc.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.Optimization.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.Razor.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Deployment.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Razor.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\WebGrease.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.Helpers.xml
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.Mvc.xml
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.Optimization.xml
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.Razor.xml
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.xml
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Deployment.xml
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Razor.xml
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\Newtonsoft.Json.xml
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\Antlr3.Runtime.pdb
+E:\backup\do an\Web\source code\Figure2\Figure2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\backup\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.csproj.AssemblyReference.cache
+E:\backup\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.csproj.CoreCompileInputs.cache
+E:\backup\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.csproj.CopyComplete
+E:\backup\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.dll
+E:\backup\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.pdb
+D:\do an\Web\source code\Figure2\Figure2\bin\Figure2.dll.config
+D:\do an\Web\source code\Figure2\Figure2\bin\Figure2.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\Figure2.pdb
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csc.exe
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csc.exe.config
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csc.rsp
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csi.exe
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csi.exe.config
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\csi.rsp
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.Managed.Core.targets
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.AppContext.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Collections.Immutable.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Console.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Globalization.Calendars.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.Compression.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.FileSystem.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Net.Http.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Net.Sockets.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Reflection.Metadata.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.ValueTuple.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.XmlDocument.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.XPath.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\vbc.exe
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\vbc.exe.config
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\vbc.rsp
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\VBCSCompiler.exe
+D:\do an\Web\source code\Figure2\Figure2\bin\roslyn\VBCSCompiler.exe.config
+D:\do an\Web\source code\Figure2\Figure2\bin\Antlr3.Runtime.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\Microsoft.Web.Infrastructure.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\Newtonsoft.Json.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Helpers.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Mvc.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Optimization.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Razor.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Deployment.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Razor.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\WebGrease.dll
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Helpers.xml
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Mvc.xml
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Optimization.xml
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.Razor.xml
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.xml
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Deployment.xml
+D:\do an\Web\source code\Figure2\Figure2\bin\System.Web.WebPages.Razor.xml
+D:\do an\Web\source code\Figure2\Figure2\bin\Newtonsoft.Json.xml
+D:\do an\Web\source code\Figure2\Figure2\bin\Antlr3.Runtime.pdb
+D:\do an\Web\source code\Figure2\Figure2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.csproj.AssemblyReference.cache
+D:\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.csproj.CoreCompileInputs.cache
+D:\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.csproj.CopyComplete
+D:\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.dll
+D:\do an\Web\source code\Figure2\Figure2\obj\Debug\Figure2.pdb
+D:\LTW\Figure2\Figure\Figure2\bin\Figure2.dll.config
+D:\LTW\Figure2\Figure\Figure2\bin\Figure2.dll
+D:\LTW\Figure2\Figure\Figure2\bin\Figure2.pdb
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\csc.exe
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\csc.exe.config
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\csc.rsp
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\csi.exe
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\csi.exe.config
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\csi.rsp
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.Managed.Core.targets
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.AppContext.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Collections.Immutable.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Console.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Globalization.Calendars.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.IO.Compression.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.IO.FileSystem.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Net.Http.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Net.Sockets.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Reflection.Metadata.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.ValueTuple.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Xml.XmlDocument.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Xml.XPath.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\vbc.exe
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\vbc.exe.config
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\vbc.rsp
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\VBCSCompiler.exe
+D:\LTW\Figure2\Figure\Figure2\bin\roslyn\VBCSCompiler.exe.config
+D:\LTW\Figure2\Figure\Figure2\bin\Antlr3.Runtime.dll
+D:\LTW\Figure2\Figure\Figure2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\LTW\Figure2\Figure\Figure2\bin\Microsoft.Web.Infrastructure.dll
+D:\LTW\Figure2\Figure\Figure2\bin\Newtonsoft.Json.dll
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.Helpers.dll
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.Mvc.dll
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.Optimization.dll
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.Razor.dll
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.WebPages.Deployment.dll
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.WebPages.dll
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.WebPages.Razor.dll
+D:\LTW\Figure2\Figure\Figure2\bin\WebGrease.dll
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.Helpers.xml
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.Mvc.xml
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.Optimization.xml
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.Razor.xml
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.WebPages.xml
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.WebPages.Deployment.xml
+D:\LTW\Figure2\Figure\Figure2\bin\System.Web.WebPages.Razor.xml
+D:\LTW\Figure2\Figure\Figure2\bin\Newtonsoft.Json.xml
+D:\LTW\Figure2\Figure\Figure2\bin\Antlr3.Runtime.pdb
+D:\LTW\Figure2\Figure\Figure2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\LTW\Figure2\Figure\Figure2\obj\Debug\Figure2.csproj.AssemblyReference.cache
+D:\LTW\Figure2\Figure\Figure2\obj\Debug\Figure2.csproj.CoreCompileInputs.cache
+D:\LTW\Figure2\Figure\Figure2\obj\Debug\Figure2.csproj.CopyComplete
+D:\LTW\Figure2\Figure\Figure2\obj\Debug\Figure2.dll
+D:\LTW\Figure2\Figure\Figure2\obj\Debug\Figure2.pdb
+D:\LTW\Figure2\Figure\Figure2\bin\PagedList.dll
+D:\LTW\Figure2\Figure\Figure2\bin\PagedList.Mvc.dll
+D:\LTW\Figure2\Figure\Figure2\bin\PagedList.xml
+D:\LTW\Figure2\Figure\Figure2\bin\PagedList.Mvc.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\Figure2.dll.config
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\Figure2.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\Figure2.pdb
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\csc.exe
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\csc.exe.config
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\csc.rsp
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\csi.exe
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\csi.exe.config
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\csi.rsp
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.AppContext.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Console.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.IO.Compression.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Net.Http.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Net.Sockets.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.ValueTuple.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Xml.XPath.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\vbc.exe
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\vbc.exe.config
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\vbc.rsp
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\VBCSCompiler.exe
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\Antlr3.Runtime.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\Newtonsoft.Json.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\PagedList.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\PagedList.Mvc.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.Helpers.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.Mvc.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.Optimization.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.Razor.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.WebPages.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.WebPages.Razor.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\WebGrease.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\PagedList.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\PagedList.Mvc.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.Helpers.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.Mvc.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.Optimization.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.Razor.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.WebPages.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\System.Web.WebPages.Razor.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\Newtonsoft.Json.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\Antlr3.Runtime.pdb
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\obj\Debug\Figure2.csproj.AssemblyReference.cache
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\obj\Debug\Figure2.csproj.CoreCompileInputs.cache
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\obj\Debug\Figure2.csproj.CopyComplete
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\obj\Debug\Figure2.dll
+C:\Users\tam20\Documents\Zalo Received Files\Figure2\Figure\Figure2\obj\Debug\Figure2.pdb

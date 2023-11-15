@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "HangCoSan";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<section id="produce1" class="section-p1">
+    
+    <div class="pro-container">
+        @foreach (var product in Model)
+        {
+            <div class="pro">
+                <a href="/Order/A10001.html">
+                    <img src="~/img/products/@product.anh" class="pro-1">
+                </a>
+                <div class="des">
+                    <span>furyu</span>
+                    <h5><a href="@Url.Action("ChiTietFigure", "Figure", new { id = product.danhMuc })">@product.tenSanPham</a></h5>
+                    <div class="start">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4><a href="@Url.Action("ChiTietFigure", "Figure", new { id = product.danhMuc })">@product.gia</a></h4>
+                </div>
+                <a href="@Url.Action("ThemGioHang","GioHang", new { ms = product.maSanPham, url =Request.Url.ToString() })">
+                    <i class="fal fa-shopping-cart cart"></i>
+                </a>
+            </div>
+        }
+        </div>
+    
+</section>
+
+    }
+
+<style>
+    .pro {
+        width: 200px;
+        text-align: center;
+        margin: 20px;
+    }
+
+        .pro img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+</style>
+
+
+

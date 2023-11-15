@@ -1,0 +1,55 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>figure</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link href="~/Content/cssFIgure/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    @Html.Action("HeaderPartial", "Figure")
+
+    @RenderSection("slider", required: false)
+    @RenderBody();
+
+
+
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Đăng ký nhận bản tin</h4>
+            <p>
+                Nhận thông tin cập nhật qua email về cửa hàng mới nhất và <span>các ưu đãi đặc biệt</span>
+            </p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Địa chỉ email của bạn.......">
+            <button class="normal">Sign Up</button>
+        </div>
+    </section>
+
+    @Html.Partial("FooterPatrial")
+
+    <div id="copyright">
+        <p>Copyright © 2023 Figure. Powered by Harry</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

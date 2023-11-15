@@ -1,0 +1,12 @@
+﻿
+@model IEnumerable<Figure2.Models.Category>
+<div class="dropdown">
+    <button class="dropbtn">Sản phẩm</button>
+    <div class="dropdown-content">
+        @foreach (var item in Model)
+        {
+            <a href="@Url.Action("HangCoSan","Figure",new { id = item.maDanhMuc })"> @item.tenDanhMuc</a>
+        }
+    </div>
+
+</div>

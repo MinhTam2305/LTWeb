@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Figure2.Models.Product>
+
+@{
+    ViewBag.Title = "TimKiem";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>TimKiem</h2>
+@using (Html.BeginForm("TimKiem", "TimKiem", FormMethod.Get))
+{
+    <p>
+        <input type="text" name="strSearch" value="@ViewBag.Search" placeholder="Nhập sản phẩm cần tìm..." size="100" /> <input type="submit" value="Tìm kiếm" />
+    </p>
+}
+@{
+    if (Model != null)
+    {
+
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.tenSanPham)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.moTa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.gia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.soLuong)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.danhMuc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.anh)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.tenSanPham)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.moTa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.gia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.soLuong)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.danhMuc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.anh)
+                    </td>
+                    
+                </tr>
+            }
+            </table>
+        }
+        }
+    }
+
