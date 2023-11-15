@@ -48,7 +48,7 @@
 
                 <li>
                     <button class="btnLogout-popup">
-                        <a href="~/User/DangXuat">Đăng xuất</a>
+                        <a href="@Url.Action("DangXuat","User" ,new {url= Request.Url.ToString()})">Đăng xuất</a>
                     </button>
                 </li>
             }
@@ -57,7 +57,7 @@
 
                 <li>
                     <button class="btnLogin-popup">
-                        <a href="~/User/DangNhap">Đăng nhập</a>
+                        <a href="@Url.Action("DangNhap","User" ,new {url= Request.Url.ToString()})">Đăng nhập</a>
                     </button>
                 </li>
 

@@ -17,11 +17,11 @@ namespace Figure2.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult DangNhap(FormCollection f)
+        public ActionResult DangNhap(FormCollection f,string url)
         {
 
-            var sTenDN = f["tenNguoiDung"];
-            var sMatKhau = f["matKhau"];
+            var sTenDN = f["Username"];
+            var sMatKhau = f["Password"];
             
             if (String.IsNullOrEmpty(sTenDN))
             {
@@ -42,7 +42,23 @@ namespace Figure2.Controllers
                     Session["TaiKhoan"] = kh;
                     Session["HoTen"] = kh.tenNguoiDung;
                     Session["id"] = kh.idNguoiDung;
+
+                    if (f["remember"].Contains("true"))
+                    {
+                        Response.Cookies["Username"].Value = sTenDN;
+                        Response.Cookies["Password"].Value = sMatKhau;
+                        Response.Cookies["Username"].Expires = DateTime.Now.AddDays(1);
+                        Response.Cookies["Password"].Expires = DateTime.Now.AddDays(1);
+                    }
+                    else
+                    {
+                        Response.Cookies["Username"].Expires = DateTime.Now.AddDays(-1);
+                        Response.Cookies["Password"].Expires = DateTime.Now.AddDays(-1);
+                    }
+                    if(url==null)
                     return RedirectToAction("Index", "Figure");
+                    else
+                        return Redirect(url);
                 }
                 else
                 {
@@ -54,10 +70,13 @@ namespace Figure2.Controllers
             Session["XLDangNhap"] = true;
             return View();
         }
-        public ActionResult DangXuat()
+        public ActionResult DangXuat(string url)
         {
             Session.Clear();
-            return RedirectToAction("Index", "Figure");
+            if (url == null)
+                return RedirectToAction("Index", "Figure");
+            else
+                return Redirect(url);
         }
     }
 }
