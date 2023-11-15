@@ -60,11 +60,10 @@
         <input type="text" size="50" id="noidung" name="noidung" />
 
         <a onclick="setSession()" id="feedbackLink" href="@Url.Action("AddFeekback", "Figure", new { id = Model.maSanPham, url = Request.Url.ToString() })">Thêm Phản Hồi</a>
-        <i class="fal fa-shopping-cart cart"></i>
-        </a>
+     
     </p>
-    <p>Tâm:  Đẹp</p>
-    <p>Tâm:  Quá đẹp</p>
+    <p>-------------------Đã đánh giá-------------------</p>
+    @Html.Action("FeekBack", "Figure",new {id=Model.maSanPham})
 </div>
 <script>
     function setSession() {

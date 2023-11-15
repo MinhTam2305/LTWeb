@@ -63,9 +63,14 @@ namespace Figure2.Controllers
             var item = from c in db.Categories select c;
             return PartialView(item);
         }
+        public ActionResult FeekBacK(int id)
+        {
+            var item = from c in db.Feedbacks where c.maSanPham == id select c;
+            return PartialView(item);
+        }
 
- 
-      public ActionResult AddFeekback(int id,string url)
+
+        public ActionResult AddFeekback(int id,string url)
         {
             Feedback fb = new Feedback();
             string inputValue = Request.Cookies["nd"]?.Value;

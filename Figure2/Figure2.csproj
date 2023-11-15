@@ -2097,6 +2097,7 @@
     <Content Include="Views\Figure\ItemSanPhamCoSan.cshtml" />
     <Content Include="Views\Figure\ItemSanPhamOrder.cshtml" />
     <Content Include="Views\Figure\ItemNendoroid.cshtml" />
+    <Content Include="Views\Figure\FeekBacK.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
