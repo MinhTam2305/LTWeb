@@ -1,0 +1,89 @@
+﻿@using Figure2.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<Figure2.Models.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+
+@helper Truncate(string s, int length)
+{
+    if (s.Length < length)
+    {
+        @s
+    }
+    else
+    {
+        @s.Substring(0, length)<text>...</text>
+    }
+}
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th >
+            Tên sản phẩm
+        </th>
+        <th ">
+            Mô tả
+        </th>
+        <th >
+           
+            @Html.DisplayNameFor(model => model.First().gia)
+        </th>
+        <th >
+            Số Lượng 
+        </th>
+        <th>
+            Danh mục
+        </th>
+        <th >
+            @Html.DisplayNameFor(model => model.First().anh)
+        </th>
+       
+        <th ></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenSanPham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.moTa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.gia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.soLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.danhMuc)
+            </td>
+            <td>
+                <img src="~/img/products/@item.anh" style="width:50px;" />
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.maSanPham }) |
+                @Html.ActionLink("Details", "Details", new { id = item.maSanPham }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.maSanPham })
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+<div>
+    Trang @(Model.PageCount < Model.PageNumber ? 0 :
+Model.PageNumber)/@Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>
+</div>

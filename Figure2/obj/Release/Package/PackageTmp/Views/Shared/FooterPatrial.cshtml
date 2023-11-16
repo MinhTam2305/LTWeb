@@ -1,0 +1,78 @@
+﻿<div id="fb-root"></div>
+
+<!-- Your Plugin chat code -->
+<div id="fb-customer-chat" class="fb-customerchat">
+</div>
+
+<script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "181282615061557");
+    chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            xfbml: true,
+            version: 'v18.0'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<footer class="section-p1">
+    <div class="col">
+        <img class="logo" src="~/img/logo.png" alt="">
+        <h4>Kết nối</h4>
+        <p><strong>Địa chỉ:</strong> 5265 abc, đường bcd, phố ac</p>
+        <p><strong>Điện thoại:</strong> 0123456789</p>
+        <p><strong>Giờ mở cửa:</strong> 0:00 sáng - 5:00 sáng, t2 -> cn</p>
+        <div class="follow">
+            <h4 class="icon">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest-p"></i>
+                <i class="fab fa-youtube"></i>
+            </h4>
+        </div>
+    </div>
+
+    <div class="col">
+        <h4>Giới thiệu</h4>
+        <a href="#">Về chúng tôi</a>
+        <a href="#">Thông tin vận chuyển</a>
+        <a href="#">Chính sách bảo mật</a>
+        <a href="#">Điều khoản</a>
+        <a href="#">Kết nối với chúng tôi</a>
+    </div>
+
+    <div class="col">
+        <h4>Tài khoản của bạn</h4>
+        <a href="#">Đăng nhập</a>
+        <a href="#">Giỏ hàng</a>
+        <a href="#">Sản phẩm yêu thích</a>
+        <a href="#">Theo dõi đơn hàng</a>
+        <a href="#">Giúp đỡ</a>
+    </div>
+
+    <div class="col install">
+        <h4>Tải phần mềm</h4>
+        <p>Từ App Store or Google Play</p>
+        <div class="row">
+            <img src="~/img/pay/app.jpg" alt="">
+            <img src="~/img/pay/play.jpg" alt="">
+        </div>
+        <p>cổng thanh toán an toàn</p>
+        <img src="~/img/pay/pay.png" alt="">
+    </div>
+</footer>
+

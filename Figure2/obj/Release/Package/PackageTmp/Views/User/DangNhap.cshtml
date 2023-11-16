@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    @Styles.Render("~/Content/cssFIgure/Login.css")
+</head>
+<body>
+
+    <div class="showcase">
+        <div class="video-container">
+            <video src="~/img/Anime Japanese Sunset Live Wallpaper.mp4" autoplay muted loop id="myVideo"></video>
+        </div>
+    </div>
+
+    <div class="main">
+        <form action="" method="POST" class="form" id="form-1">
+            <h3 class="heading">Đăng nhập</h3>
+            <p class="desc">Cùng nhau thành wibu nèo❤️</p>
+
+
+            <div class="spacer"></div>
+            @if (Request.Cookies["Username"] != null && Request.Cookies["Password"] != null)
+            {
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Tên đầy đủ</label>
+                    <input id="Username" name="Username" type="text" placeholder="Username" class="form-control" required value="@Request.Cookies["Username"].Value">
+                    @ViewData["Err1"]
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Mật khẩu</label>
+                    <input id="Password" name="Password" type="password" placeholder="Password" class="form-control" value="@Request.Cookies["Password"].Value" required>
+                    @ViewData["Err2"]
+                    <span class="form-message"></span>
+                </div>
+
+            }
+            else
+            {
+                <div class="form-group">
+                    <label for="fullname" class="form-label">Tên đầy đủ</label>
+                    <input id="Username" name="Username" type="text" placeholder="Username" class="form-control" required >
+                    @ViewData["Err1"]
+                    <span class="form-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="form-label">Mật khẩu</label>
+                    <input id="Password" name="Password" type="password" placeholder="Password" class="form-control"  required>
+                    @ViewData["Err2"]
+                    <span class="form-message"></span>
+                </div>
+            }
+        <div>@Html.CheckBox("remember") <span style="font-style:italic">Nhớ thông tin đăng nhập</span></div>
+        <div><p style="font-style:italic; color:red; margin:0px;">@ViewBag.ThongBao</p></div>
+            <button class="form-submit">Đăng nhập</button>
+
+            <div class="form-group">
+                <p class="register-link">Bạn không có tài khoản ?</p>
+                <a href="register.html" class="register-link">Đăng ký</a>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

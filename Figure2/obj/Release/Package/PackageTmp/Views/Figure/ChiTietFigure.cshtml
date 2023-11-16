@@ -1,0 +1,83 @@
+﻿@model Figure2.Models.Product
+@{
+    ViewBag.Title = "ChiTietFigure";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<style>
+    .thumbnail {
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+        .thumbnail:hover {
+            transform: scale(1.1);
+        }
+
+    .main-image {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="~/img/products/@Model.anh" class="img-fluid main-image" />
+            <div class="row mt-3">
+                <div class="col-4">
+                    <img src="~/img/products/@Model.anh" class="img-fluid thumbnail" onclick="changeImage(this)" alt="Hình nhỏ 1">
+                </div>
+                <div class="col-4">
+                    <img src="~/img/products/@Model.anh" class="img-fluid thumbnail" onclick="changeImage(this)" alt="Hình nhỏ 2">
+                </div>
+                <div class="col-4">
+                    <img src="~/img/products/@Model.anh" class="img-fluid thumbnail" onclick="changeImage(this)" alt="Hình nhỏ 3">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h2>Tên sản phẩm: @Model.tenSanPham</h2>
+            <p>Mô tả sản phẩm chi tiết: @Model.moTa</p>
+            <p>Giá: @Model.gia</p>
+            <div class="form-inline">
+                <a href="@Url.Action("ThemGioHang", "GioHang", new { ms = Model.maSanPham, url = Request.Url.ToString() })">
+                    <i class="fal fa-shopping-cart cart"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="container">
+    <h2>Đánh giá</h2>
+    <p>
+
+        Đánh giá sản phẩm:
+        <input type="text" size="50" id="noidung" name="noidung" />
+
+        <a onclick="setSession()" id="feedbackLink" href="@Url.Action("AddFeekback", "Figure", new { id = Model.maSanPham, url = Request.Url.ToString() })">Thêm Phản Hồi</a>
+     
+    </p>
+    <p>-------------------Đã đánh giá-------------------</p>
+    @Html.Action("FeekBack", "Figure",new {id=Model.maSanPham})
+</div>
+<script>
+    function setSession() {
+        var inputValue = document.getElementById('noidung').value;
+
+     
+        document.cookie = "nd=" + inputValue + "; path=/";
+
+     
+    }
+</script>
+<script>
+    function changeImage(element) {
+        var mainImage = document.querySelector('.main-image');
+        mainImage.src = element.src;
+    }
+</script>
