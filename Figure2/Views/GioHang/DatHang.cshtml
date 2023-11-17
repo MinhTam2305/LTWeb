@@ -6,53 +6,66 @@
 
 @using Figure2.Models
 
-<h2 style="text-align:center">THÔNG TIN ĐƠN HÀNG</h2>
-<table align="center" border="1">
-    <tr style="text-align:center; font-weight:bold;">
-        <td>Mã Figure</td>
-        <td>Tên</td>
-        <td>Ảnh Bìa</td>
-        <td>Số Lượng</td>
-        <td>Đơn Giá</td>
-        <td>Thành Tiền</td>
+<br />
+<h3 style="text-align:center;">THÔNG TIN GIỎ HÀNG</h3>
+<br />
+<table @*border="1"*@ style="font-family:Arial">
+    <tr style=" font-size: 18px;font-weight:bold;text-align:center">
+        <td>Mã sách</td>
+        <td>Tên sách</td>
+        <td width="160px">Ảnh bìa</td>
+        <td width="100px">Số lượng</td>
+        <td>Đơn giá</td>
+        <td width="130px">Thành tiền</td>
+       
+        <td width="60px">  @Html.ActionLink("Xóa tất cả", "XoaGioHang")</td>
     </tr>
     @foreach (var item in Model)
     {
-        <tr style="text-align:center; font-weight:bold;">
-            <td align="center">@item.iMaFigure</td>
-            <td>@item.sTenFigure</td>
-            <td><img src="~/img/products/@item.sAnh" style="width:100px;"></td>
-            @using (Html.BeginForm("CapNhatGioHang", "GioHang", new
-            {
-                iMaFigure = item.iMaFigure
-            }))
+        <tr>
+            <td align="center">
+                @item.iMaFigure
+            </td>
+            <td>
+                @item.sTenFigure
+            </td>
+            <td style="text-align:center">
+                <img src="~/img/products/@item.sAnh" style="width:150px;" />
+            </td>
+            @using (Html.BeginForm("CapNhatGioHang", "GioHang", new { iMaFigure = item.iMaFigure }))
             {
                 <td align="center">
                     @item.iSoLuong
                 </td>
-                <td align="center">@string.Format("{0:#,##0,0}", @item.dDonGia)</td>
-                <td align="center">@string.Format("{0:#,##0,0}", @item.dThanhTien)</td>
+                <td align="center"> @string.Format("{0:#,##0,0}", @item.dDonGia)</td>
+                <td style="color:red;" align="center">@string.Format("{0:#,##0,0}", @item.dThanhTien)</td>
+
+
             }
         </tr>
     }
-    <tr>
-    <tr>
 
-        <td colspan="3" style="text-align:right; color:red; font-weight:bold; padding-right:5px;">
-
-            Số lượng sách: @string.Format("{0:#,##0}", @ViewBag.TongSoLuong)
-        </td>
-        <td colspan="3" style="text-align:center; color:red; font-weight:bold;">
-            Tổng tiền: @string.Format("{0:#,##0,0}", @ViewBag.TongTien) VNĐ
+    <tr class="no-border" style="color:blue;text-align:left;">
+        <td colspan="9">
+            Số lượng: @string.Format("{0:#,##0,0}", @ViewBag.TongSoLuong)
         </td>
     </tr>
+    <tr class="no-border" style="color:blue;text-align:left;">
+        <td colspan="9">
+            Tổng tiền: @string.Format("{0:#,##0,0}", @ViewBag.TongTien) VND
+        </td>
+
+    </tr>
+
     <tr style="font-weight:bold; color:blue; text-align:right;">
         <td colspan="9">
             @Html.ActionLink("TRỞ VỀ GIỎ HÀNG", "GioHang", "GioHang")
         </td>
     </tr>
 </table>
-<h2 style="text-align:center">THÔNG TIN ĐẶT HÀNG</h2>
+<br />
+<h3 style="text-align:center">THÔNG TIN ĐẶT HÀNG</h3>
+<br />
 @{
     NguoiDung kh = (NguoiDung)Session["TaiKhoan"];
 }
@@ -82,7 +95,7 @@
         <tr style="height:40px;">
             <td>Ngày giao:</td>
             <td style="font-weight:bold">
-                <input type="date" name="NgayGiao" />
+                <input type="date" name="NgayGiao" required />
             </td>
         </tr>
         <tr style="height:40px;">
@@ -93,3 +106,13 @@
         </tr>
     }
 </table>
+<br />
+<style>
+    table {
+        margin: auto;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>

@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
@@ -143,6 +146,7 @@
       <DependentUpon>db.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\GioHang.cs" />
+    <Compile Include="Models\VnPayLibrary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2098,6 +2102,10 @@
     <Content Include="Views\Figure\ItemSanPhamOrder.cshtml" />
     <Content Include="Views\Figure\ItemNendoroid.cshtml" />
     <Content Include="Views\Figure\FeekBacK.cshtml" />
+    <Content Include="Views\GioHang\VnpayReturn.cshtml" />
+    <Content Include="Views\GioHang\XacNhanThanhToan.cshtml" />
+    <Content Include="Views\GioHang\a.cshtml" />
+    <Content Include="Views\GioHang\ThanhToanKhiNhaHang.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
