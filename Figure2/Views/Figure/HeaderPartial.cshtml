@@ -38,7 +38,7 @@
             @if (Session["TaiKhoan"] != null)
             {
                 <li>
-                    <a>Xin chào: @Session["HoTen"].ToString()</a>
+                    <a href="@Url.Action("TTUser","User")">Xin chào: @Session["HoTen"].ToString()</a>
                 </li>
 
                 <li>
@@ -47,6 +47,19 @@
                     </button>
                 </li>
             }
+            else if (Session["LoginGF"] != null)
+            {
+                <li>
+                    <a href="">Xin chào: @Session["HoTenGF"].ToString()</a>
+                </li>
+
+                <li>
+                    <button class="btnLogout-popup">
+                        <a href="@Url.Action("DangXuat","User" ,new {url= Request.Url.ToString()})">Đăng xuất</a>
+                    </button>
+                </li>
+            }
+
             else
             {
 

@@ -486,3 +486,7 @@ C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\obj\Debug\Figure2.dll
 C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\obj\Debug\Figure2.pdb
 C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\log4net.dll
 C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\log4net.xml
+C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\Facebook.dll
+C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\GoogleAuthentication.dll
+C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\QRCoder.dll
+C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\Facebook.xml

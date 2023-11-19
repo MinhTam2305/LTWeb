@@ -17,10 +17,10 @@ namespace Figure2.Areas.Admin.Controllers
         // GET: Admin/DanhMuc
         public ActionResult Index(int? Page)
         {
-            /* if (Session["Admin"] == null)
-             {
-                 return RedirectToAction("Login", "Home");
-             }*/
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
             int iPageNum = (Page ?? 1);
             int iPageSize = 7;
             return View(db.NguoiDungs.ToList().OrderBy(n => n.idNguoiDung).ToPagedList(iPageNum, iPageSize));
@@ -110,6 +110,7 @@ namespace Figure2.Areas.Admin.Controllers
         public ActionResult DeleteConfirm(int id, FormCollection f)
         {
             var nd = db.NguoiDungs.SingleOrDefault(n => n.idNguoiDung == id);
+           
             if (nd == null)
             {
                 Response.StatusCode = 404;

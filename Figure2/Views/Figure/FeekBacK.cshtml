@@ -1,6 +1,30 @@
-﻿@model IEnumerable<Figure2.Models.Feedback>
+﻿@using Figure2.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<Figure2.Models.Feedback>
+
+@if (ViewBag.FeekBack == null)
+{
+    <p>Chưa có đánh giá nào</p>
+}
 @foreach (var item in Model)
 {
 
-<p>@item.NguoiDung.tenNguoiDung:  @item.noiDung</p>
+    <p>@item.NguoiDung.tenNguoiDung:  @item.noiDung</p>
 }
+
+
+<div>
+    Trang @(Model.PageCount < Model.PageNumber ? 0 :
+Model.PageNumber)/@Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("ChiTietFigure", new { id = ViewBag.MaSanPham, page = page }))
+</div>
+</div>
+
+<style>
+    .MenuTrang {
+        display: inline;
+        text-align: center;
+    }
+</style>
+@Styles.Render("~/Content/PagedList.css")

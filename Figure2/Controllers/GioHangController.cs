@@ -15,7 +15,7 @@ namespace Figure2.Controllers
     public class GioHangController : Controller
     {
         private static readonly ILog log = log4net.LogManager.GetLogger(typeof(GioHangController));
-        // GET: GioHang
+
         dbDataContext data = new dbDataContext();
         public List<GioHang> LayGioHang()
         {
@@ -112,19 +112,82 @@ namespace Figure2.Controllers
             lstGioHang.Clear();
             return RedirectToAction("Index", "Figure");
         }
+        [HttpGet]
+        public ActionResult LayTT()
+        {
+            return View();
 
+        }
+
+        [HttpPost]
+        [ValidateInput(false)]
+        public ActionResult LayTT(FormCollection f)
+        {
+            TTNguoiDung tt = new TTNguoiDung();
+            if (f["tenNguoiDung"] == null)
+            {
+                ViewBag.tenNguoiDung = f["tenNguoiDung"];
+                return View();
+            }
+            else if (f["email"] == null)
+            {
+                ViewBag.email = f["email"];
+                return View();
+            }
+            else if (f["diaChi"] == null)
+            {
+                ViewBag.diaChi = f["diaChi"];
+                return View();
+            }
+            else if(f["sdt"] == null)
+            {
+                ViewBag.sdt = f["sdt"];
+                return View();
+            }
+            else
+            {
+
+                if (ModelState.IsValid)
+                {
+                    if (Session["abc"] == null) {
+                        Session["email"]= f["email"];
+                        Session["ten"]= f["tenNguoiDung"];
+                        tt.tenND = f["tenNguoiDung"];
+                    tt.Email = f["email"];
+                    tt.DaiChi = f["diaChi"];
+                    tt.SDT = f["sdt"];
+                    Session["abc"] = tt;
+                    return RedirectToAction("Index", "Figure");
+                }
+                }
+            }
+
+            return View();
+        }
         [HttpGet]
         public ActionResult DatHang()
         {
-            if (Session["TaiKhoan"] == null || Session["TaiKhoan"].ToString() == "")
+            TTNguoiDung tt = new TTNguoiDung();         
+            if (Session["TaiKhoan"] == null&&Session["LoginGF"] == null)
             {
                 return RedirectToAction("DangNhap", "User");
             }
+            if (Session["ten"] == null&& Session["TaiKhoan"] == null)
+            {
+                return RedirectToAction("LayTT", "GioHang");
+            }
+
             if (Session["GioHang"] == null)
             {
                 return RedirectToAction("Index", "Figure");
             }
             List<GioHang> lstGioHang = LayGioHang();
+            if (lstGioHang == null)
+            {
+                List<TTNguoiDung> ttnd = Session["abc"] as List<TTNguoiDung>;
+                return View(ttnd);
+            }
+          
             ViewBag.TongSoLuong = TongSoLuong();
             ViewBag.TongTien = TongTien();
             return View(lstGioHang);
@@ -133,11 +196,20 @@ namespace Figure2.Controllers
         public ActionResult DatHang(FormCollection f)
         {
             DonHang ddh = new DonHang();
-            NguoiDung kh = (NguoiDung)Session["TaiKhoan"];
+            if (Session["TaiKhoan"]!=null)
+            {
+                NguoiDung kh = (NguoiDung)Session["TaiKhoan"];
+                ddh.idNguoiDung = kh.idNguoiDung;
+            }
+            else
+            {
+                ddh.idNguoiDung = 1;
+            }
+           
             List<GioHang> lstGioHang = LayGioHang();
-            ddh.idNguoiDung = kh.idNguoiDung;
-            string hoten = kh.tenNguoiDung.ToString();
-            string toAddress = kh.email.ToString();
+            
+            string hoten = Session["ten"].ToString();
+            string toAddress = Session["email"].ToString();
             ddh.ngayDatHang = DateTime.Now;
             var NgayGiao = string.Format("{0:MM/dd/yyyy}", f["NgayGiao"]);
             var ngaydat = string.Format("{0:MM/dd/yyyy}", ddh.ngayDatHang.ToString());

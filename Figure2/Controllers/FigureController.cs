@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 using Figure2.Models;
+using PagedList;
 
 namespace Figure2.Controllers
 {
@@ -63,10 +64,17 @@ namespace Figure2.Controllers
             var item = from c in db.Categories select c;
             return PartialView(item);
         }
-        public ActionResult FeekBacK(int id)
+        public ActionResult FeekBacK(int id, int? Page)
         {
             var item = from c in db.Feedbacks where c.maSanPham == id select c;
-            return PartialView(item);
+            if (item.Any())
+            {
+                ViewBag.FeekBack = "Chưa có đánh giá";
+            }
+            int iPageNum = (Page ?? 1);
+            int iPageSize = 3;
+            ViewBag.MaSanPham = id;
+            return PartialView(item.ToPagedList(iPageNum, iPageSize));
         }
 
 

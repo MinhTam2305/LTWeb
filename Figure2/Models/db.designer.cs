@@ -48,12 +48,12 @@ namespace Figure2.Models
     partial void InsertDonHang(DonHang instance);
     partial void UpdateDonHang(DonHang instance);
     partial void DeleteDonHang(DonHang instance);
-    partial void InsertNguoiDung(NguoiDung instance);
-    partial void UpdateNguoiDung(NguoiDung instance);
-    partial void DeleteNguoiDung(NguoiDung instance);
     partial void InsertProduct(Product instance);
     partial void UpdateProduct(Product instance);
     partial void DeleteProduct(Product instance);
+    partial void InsertNguoiDung(NguoiDung instance);
+    partial void UpdateNguoiDung(NguoiDung instance);
+    partial void DeleteNguoiDung(NguoiDung instance);
     #endregion
 		
 		public dbDataContext(string connection) : 
@@ -62,7 +62,7 @@ namespace Figure2.Models
 			OnCreated();
 		}
         public dbDataContext() :
-            base(global::System.Configuration.ConfigurationManager.ConnectionStrings["LTWebConnectionString"].ConnectionString, mappingSource)
+    base(global::System.Configuration.ConfigurationManager.ConnectionStrings["LTWebConnectionString"].ConnectionString, mappingSource)
         {
             OnCreated();
         }
@@ -132,19 +132,19 @@ namespace Figure2.Models
 			}
 		}
 		
-		public System.Data.Linq.Table<NguoiDung> NguoiDungs
-		{
-			get
-			{
-				return this.GetTable<NguoiDung>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Product> Products
 		{
 			get
 			{
 				return this.GetTable<Product>();
+			}
+		}
+		
+		public System.Data.Linq.Table<NguoiDung> NguoiDungs
+		{
+			get
+			{
+				return this.GetTable<NguoiDung>();
 			}
 		}
 	}
@@ -653,13 +653,13 @@ namespace Figure2.Models
 		
 		private System.Nullable<System.DateTime> _thoiGian;
 		
-		private EntityRef<NguoiDung> _NguoiDung;
-		
-		private EntityRef<NguoiDung> _NguoiDung1;
-		
 		private EntityRef<Product> _Product;
 		
 		private EntityRef<Product> _Product1;
+		
+		private EntityRef<NguoiDung> _NguoiDung;
+		
+		private EntityRef<NguoiDung> _NguoiDung1;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -679,10 +679,10 @@ namespace Figure2.Models
 		
 		public Feedback()
 		{
-			this._NguoiDung = default(EntityRef<NguoiDung>);
-			this._NguoiDung1 = default(EntityRef<NguoiDung>);
 			this._Product = default(EntityRef<Product>);
 			this._Product1 = default(EntityRef<Product>);
+			this._NguoiDung = default(EntityRef<NguoiDung>);
+			this._NguoiDung1 = default(EntityRef<NguoiDung>);
 			OnCreated();
 		}
 		
@@ -794,74 +794,6 @@ namespace Figure2.Models
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Feedback", Storage="_NguoiDung", ThisKey="idNguoiDung", OtherKey="idNguoiDung", IsForeignKey=true)]
-		public NguoiDung NguoiDung
-		{
-			get
-			{
-				return this._NguoiDung.Entity;
-			}
-			set
-			{
-				NguoiDung previousValue = this._NguoiDung.Entity;
-				if (((previousValue != value) 
-							|| (this._NguoiDung.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._NguoiDung.Entity = null;
-						previousValue.Feedbacks.Remove(this);
-					}
-					this._NguoiDung.Entity = value;
-					if ((value != null))
-					{
-						value.Feedbacks.Add(this);
-						this._idNguoiDung = value.idNguoiDung;
-					}
-					else
-					{
-						this._idNguoiDung = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("NguoiDung");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Feedback1", Storage="_NguoiDung1", ThisKey="idNguoiDung", OtherKey="idNguoiDung", IsForeignKey=true)]
-		public NguoiDung NguoiDung1
-		{
-			get
-			{
-				return this._NguoiDung1.Entity;
-			}
-			set
-			{
-				NguoiDung previousValue = this._NguoiDung1.Entity;
-				if (((previousValue != value) 
-							|| (this._NguoiDung1.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._NguoiDung1.Entity = null;
-						previousValue.Feedbacks1.Remove(this);
-					}
-					this._NguoiDung1.Entity = value;
-					if ((value != null))
-					{
-						value.Feedbacks1.Add(this);
-						this._idNguoiDung = value.idNguoiDung;
-					}
-					else
-					{
-						this._idNguoiDung = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("NguoiDung1");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Product_Feedback", Storage="_Product", ThisKey="maSanPham", OtherKey="maSanPham", IsForeignKey=true)]
 		public Product Product
 		{
@@ -926,6 +858,74 @@ namespace Figure2.Models
 						this._maSanPham = default(Nullable<int>);
 					}
 					this.SendPropertyChanged("Product1");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Feedback", Storage="_NguoiDung", ThisKey="idNguoiDung", OtherKey="idNguoiDung", IsForeignKey=true)]
+		public NguoiDung NguoiDung
+		{
+			get
+			{
+				return this._NguoiDung.Entity;
+			}
+			set
+			{
+				NguoiDung previousValue = this._NguoiDung.Entity;
+				if (((previousValue != value) 
+							|| (this._NguoiDung.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._NguoiDung.Entity = null;
+						previousValue.Feedbacks.Remove(this);
+					}
+					this._NguoiDung.Entity = value;
+					if ((value != null))
+					{
+						value.Feedbacks.Add(this);
+						this._idNguoiDung = value.idNguoiDung;
+					}
+					else
+					{
+						this._idNguoiDung = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("NguoiDung");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Feedback1", Storage="_NguoiDung1", ThisKey="idNguoiDung", OtherKey="idNguoiDung", IsForeignKey=true)]
+		public NguoiDung NguoiDung1
+		{
+			get
+			{
+				return this._NguoiDung1.Entity;
+			}
+			set
+			{
+				NguoiDung previousValue = this._NguoiDung1.Entity;
+				if (((previousValue != value) 
+							|| (this._NguoiDung1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._NguoiDung1.Entity = null;
+						previousValue.Feedbacks1.Remove(this);
+					}
+					this._NguoiDung1.Entity = value;
+					if ((value != null))
+					{
+						value.Feedbacks1.Add(this);
+						this._idNguoiDung = value.idNguoiDung;
+					}
+					else
+					{
+						this._idNguoiDung = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("NguoiDung1");
 				}
 			}
 		}
@@ -1581,380 +1581,6 @@ namespace Figure2.Models
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.NguoiDung")]
-	public partial class NguoiDung : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _idNguoiDung;
-		
-		private string _tenNguoiDung;
-		
-		private string _email;
-		
-		private string _diaChi;
-		
-		private string _matKhau;
-		
-		private string _soDienThoai;
-		
-		private string _taiKhoan;
-		
-		private EntitySet<Cart> _Carts;
-		
-		private EntitySet<Cart> _Carts1;
-		
-		private EntitySet<Feedback> _Feedbacks;
-		
-		private EntitySet<Feedback> _Feedbacks1;
-		
-		private EntitySet<DonHang> _DonHangs;
-		
-		private EntitySet<DonHang> _DonHangs1;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidNguoiDungChanging(int value);
-    partial void OnidNguoiDungChanged();
-    partial void OntenNguoiDungChanging(string value);
-    partial void OntenNguoiDungChanged();
-    partial void OnemailChanging(string value);
-    partial void OnemailChanged();
-    partial void OndiaChiChanging(string value);
-    partial void OndiaChiChanged();
-    partial void OnmatKhauChanging(string value);
-    partial void OnmatKhauChanged();
-    partial void OnsoDienThoaiChanging(string value);
-    partial void OnsoDienThoaiChanged();
-    partial void OntaiKhoanChanging(string value);
-    partial void OntaiKhoanChanged();
-    #endregion
-		
-		public NguoiDung()
-		{
-			this._Carts = new EntitySet<Cart>(new Action<Cart>(this.attach_Carts), new Action<Cart>(this.detach_Carts));
-			this._Carts1 = new EntitySet<Cart>(new Action<Cart>(this.attach_Carts1), new Action<Cart>(this.detach_Carts1));
-			this._Feedbacks = new EntitySet<Feedback>(new Action<Feedback>(this.attach_Feedbacks), new Action<Feedback>(this.detach_Feedbacks));
-			this._Feedbacks1 = new EntitySet<Feedback>(new Action<Feedback>(this.attach_Feedbacks1), new Action<Feedback>(this.detach_Feedbacks1));
-			this._DonHangs = new EntitySet<DonHang>(new Action<DonHang>(this.attach_DonHangs), new Action<DonHang>(this.detach_DonHangs));
-			this._DonHangs1 = new EntitySet<DonHang>(new Action<DonHang>(this.attach_DonHangs1), new Action<DonHang>(this.detach_DonHangs1));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNguoiDung", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int idNguoiDung
-		{
-			get
-			{
-				return this._idNguoiDung;
-			}
-			set
-			{
-				if ((this._idNguoiDung != value))
-				{
-					this.OnidNguoiDungChanging(value);
-					this.SendPropertyChanging();
-					this._idNguoiDung = value;
-					this.SendPropertyChanged("idNguoiDung");
-					this.OnidNguoiDungChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenNguoiDung", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string tenNguoiDung
-		{
-			get
-			{
-				return this._tenNguoiDung;
-			}
-			set
-			{
-				if ((this._tenNguoiDung != value))
-				{
-					this.OntenNguoiDungChanging(value);
-					this.SendPropertyChanging();
-					this._tenNguoiDung = value;
-					this.SendPropertyChanged("tenNguoiDung");
-					this.OntenNguoiDungChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string email
-		{
-			get
-			{
-				return this._email;
-			}
-			set
-			{
-				if ((this._email != value))
-				{
-					this.OnemailChanging(value);
-					this.SendPropertyChanging();
-					this._email = value;
-					this.SendPropertyChanged("email");
-					this.OnemailChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_diaChi", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
-		public string diaChi
-		{
-			get
-			{
-				return this._diaChi;
-			}
-			set
-			{
-				if ((this._diaChi != value))
-				{
-					this.OndiaChiChanging(value);
-					this.SendPropertyChanging();
-					this._diaChi = value;
-					this.SendPropertyChanged("diaChi");
-					this.OndiaChiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matKhau", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string matKhau
-		{
-			get
-			{
-				return this._matKhau;
-			}
-			set
-			{
-				if ((this._matKhau != value))
-				{
-					this.OnmatKhauChanging(value);
-					this.SendPropertyChanging();
-					this._matKhau = value;
-					this.SendPropertyChanged("matKhau");
-					this.OnmatKhauChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soDienThoai", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string soDienThoai
-		{
-			get
-			{
-				return this._soDienThoai;
-			}
-			set
-			{
-				if ((this._soDienThoai != value))
-				{
-					this.OnsoDienThoaiChanging(value);
-					this.SendPropertyChanging();
-					this._soDienThoai = value;
-					this.SendPropertyChanged("soDienThoai");
-					this.OnsoDienThoaiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_taiKhoan", DbType="NVarChar(50)")]
-		public string taiKhoan
-		{
-			get
-			{
-				return this._taiKhoan;
-			}
-			set
-			{
-				if ((this._taiKhoan != value))
-				{
-					this.OntaiKhoanChanging(value);
-					this.SendPropertyChanging();
-					this._taiKhoan = value;
-					this.SendPropertyChanged("taiKhoan");
-					this.OntaiKhoanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Cart", Storage="_Carts", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
-		public EntitySet<Cart> Carts
-		{
-			get
-			{
-				return this._Carts;
-			}
-			set
-			{
-				this._Carts.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Cart1", Storage="_Carts1", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
-		public EntitySet<Cart> Carts1
-		{
-			get
-			{
-				return this._Carts1;
-			}
-			set
-			{
-				this._Carts1.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Feedback", Storage="_Feedbacks", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
-		public EntitySet<Feedback> Feedbacks
-		{
-			get
-			{
-				return this._Feedbacks;
-			}
-			set
-			{
-				this._Feedbacks.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Feedback1", Storage="_Feedbacks1", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
-		public EntitySet<Feedback> Feedbacks1
-		{
-			get
-			{
-				return this._Feedbacks1;
-			}
-			set
-			{
-				this._Feedbacks1.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_DonHang", Storage="_DonHangs", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
-		public EntitySet<DonHang> DonHangs
-		{
-			get
-			{
-				return this._DonHangs;
-			}
-			set
-			{
-				this._DonHangs.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_DonHang1", Storage="_DonHangs1", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
-		public EntitySet<DonHang> DonHangs1
-		{
-			get
-			{
-				return this._DonHangs1;
-			}
-			set
-			{
-				this._DonHangs1.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Carts(Cart entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung = this;
-		}
-		
-		private void detach_Carts(Cart entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung = null;
-		}
-		
-		private void attach_Carts1(Cart entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung1 = this;
-		}
-		
-		private void detach_Carts1(Cart entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung1 = null;
-		}
-		
-		private void attach_Feedbacks(Feedback entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung = this;
-		}
-		
-		private void detach_Feedbacks(Feedback entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung = null;
-		}
-		
-		private void attach_Feedbacks1(Feedback entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung1 = this;
-		}
-		
-		private void detach_Feedbacks1(Feedback entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung1 = null;
-		}
-		
-		private void attach_DonHangs(DonHang entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung = this;
-		}
-		
-		private void detach_DonHangs(DonHang entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung = null;
-		}
-		
-		private void attach_DonHangs1(DonHang entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung1 = this;
-		}
-		
-		private void detach_DonHangs1(DonHang entity)
-		{
-			this.SendPropertyChanging();
-			entity.NguoiDung1 = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Product")]
 	public partial class Product : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -2348,6 +1974,404 @@ namespace Figure2.Models
 		{
 			this.SendPropertyChanging();
 			entity.Product1 = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.NguoiDung")]
+	public partial class NguoiDung : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _idNguoiDung;
+		
+		private string _tenNguoiDung;
+		
+		private string _email;
+		
+		private string _diaChi;
+		
+		private string _matKhau;
+		
+		private string _soDienThoai;
+		
+		private string _taiKhoan;
+		
+		private string _ResetCode;
+		
+		private EntitySet<Cart> _Carts;
+		
+		private EntitySet<Cart> _Carts1;
+		
+		private EntitySet<Feedback> _Feedbacks;
+		
+		private EntitySet<Feedback> _Feedbacks1;
+		
+		private EntitySet<DonHang> _DonHangs;
+		
+		private EntitySet<DonHang> _DonHangs1;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidNguoiDungChanging(int value);
+    partial void OnidNguoiDungChanged();
+    partial void OntenNguoiDungChanging(string value);
+    partial void OntenNguoiDungChanged();
+    partial void OnemailChanging(string value);
+    partial void OnemailChanged();
+    partial void OndiaChiChanging(string value);
+    partial void OndiaChiChanged();
+    partial void OnmatKhauChanging(string value);
+    partial void OnmatKhauChanged();
+    partial void OnsoDienThoaiChanging(string value);
+    partial void OnsoDienThoaiChanged();
+    partial void OntaiKhoanChanging(string value);
+    partial void OntaiKhoanChanged();
+    partial void OnResetCodeChanging(string value);
+    partial void OnResetCodeChanged();
+    #endregion
+		
+		public NguoiDung()
+		{
+			this._Carts = new EntitySet<Cart>(new Action<Cart>(this.attach_Carts), new Action<Cart>(this.detach_Carts));
+			this._Carts1 = new EntitySet<Cart>(new Action<Cart>(this.attach_Carts1), new Action<Cart>(this.detach_Carts1));
+			this._Feedbacks = new EntitySet<Feedback>(new Action<Feedback>(this.attach_Feedbacks), new Action<Feedback>(this.detach_Feedbacks));
+			this._Feedbacks1 = new EntitySet<Feedback>(new Action<Feedback>(this.attach_Feedbacks1), new Action<Feedback>(this.detach_Feedbacks1));
+			this._DonHangs = new EntitySet<DonHang>(new Action<DonHang>(this.attach_DonHangs), new Action<DonHang>(this.detach_DonHangs));
+			this._DonHangs1 = new EntitySet<DonHang>(new Action<DonHang>(this.attach_DonHangs1), new Action<DonHang>(this.detach_DonHangs1));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idNguoiDung", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int idNguoiDung
+		{
+			get
+			{
+				return this._idNguoiDung;
+			}
+			set
+			{
+				if ((this._idNguoiDung != value))
+				{
+					this.OnidNguoiDungChanging(value);
+					this.SendPropertyChanging();
+					this._idNguoiDung = value;
+					this.SendPropertyChanged("idNguoiDung");
+					this.OnidNguoiDungChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_tenNguoiDung", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string tenNguoiDung
+		{
+			get
+			{
+				return this._tenNguoiDung;
+			}
+			set
+			{
+				if ((this._tenNguoiDung != value))
+				{
+					this.OntenNguoiDungChanging(value);
+					this.SendPropertyChanging();
+					this._tenNguoiDung = value;
+					this.SendPropertyChanged("tenNguoiDung");
+					this.OntenNguoiDungChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string email
+		{
+			get
+			{
+				return this._email;
+			}
+			set
+			{
+				if ((this._email != value))
+				{
+					this.OnemailChanging(value);
+					this.SendPropertyChanging();
+					this._email = value;
+					this.SendPropertyChanged("email");
+					this.OnemailChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_diaChi", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string diaChi
+		{
+			get
+			{
+				return this._diaChi;
+			}
+			set
+			{
+				if ((this._diaChi != value))
+				{
+					this.OndiaChiChanging(value);
+					this.SendPropertyChanging();
+					this._diaChi = value;
+					this.SendPropertyChanged("diaChi");
+					this.OndiaChiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_matKhau", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string matKhau
+		{
+			get
+			{
+				return this._matKhau;
+			}
+			set
+			{
+				if ((this._matKhau != value))
+				{
+					this.OnmatKhauChanging(value);
+					this.SendPropertyChanging();
+					this._matKhau = value;
+					this.SendPropertyChanged("matKhau");
+					this.OnmatKhauChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soDienThoai", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string soDienThoai
+		{
+			get
+			{
+				return this._soDienThoai;
+			}
+			set
+			{
+				if ((this._soDienThoai != value))
+				{
+					this.OnsoDienThoaiChanging(value);
+					this.SendPropertyChanging();
+					this._soDienThoai = value;
+					this.SendPropertyChanged("soDienThoai");
+					this.OnsoDienThoaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_taiKhoan", DbType="NVarChar(50)")]
+		public string taiKhoan
+		{
+			get
+			{
+				return this._taiKhoan;
+			}
+			set
+			{
+				if ((this._taiKhoan != value))
+				{
+					this.OntaiKhoanChanging(value);
+					this.SendPropertyChanging();
+					this._taiKhoan = value;
+					this.SendPropertyChanged("taiKhoan");
+					this.OntaiKhoanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ResetCode", DbType="NVarChar(100)")]
+		public string ResetCode
+		{
+			get
+			{
+				return this._ResetCode;
+			}
+			set
+			{
+				if ((this._ResetCode != value))
+				{
+					this.OnResetCodeChanging(value);
+					this.SendPropertyChanging();
+					this._ResetCode = value;
+					this.SendPropertyChanged("ResetCode");
+					this.OnResetCodeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Cart", Storage="_Carts", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
+		public EntitySet<Cart> Carts
+		{
+			get
+			{
+				return this._Carts;
+			}
+			set
+			{
+				this._Carts.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Cart1", Storage="_Carts1", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
+		public EntitySet<Cart> Carts1
+		{
+			get
+			{
+				return this._Carts1;
+			}
+			set
+			{
+				this._Carts1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Feedback", Storage="_Feedbacks", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
+		public EntitySet<Feedback> Feedbacks
+		{
+			get
+			{
+				return this._Feedbacks;
+			}
+			set
+			{
+				this._Feedbacks.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_Feedback1", Storage="_Feedbacks1", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
+		public EntitySet<Feedback> Feedbacks1
+		{
+			get
+			{
+				return this._Feedbacks1;
+			}
+			set
+			{
+				this._Feedbacks1.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_DonHang", Storage="_DonHangs", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
+		public EntitySet<DonHang> DonHangs
+		{
+			get
+			{
+				return this._DonHangs;
+			}
+			set
+			{
+				this._DonHangs.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="NguoiDung_DonHang1", Storage="_DonHangs1", ThisKey="idNguoiDung", OtherKey="idNguoiDung")]
+		public EntitySet<DonHang> DonHangs1
+		{
+			get
+			{
+				return this._DonHangs1;
+			}
+			set
+			{
+				this._DonHangs1.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Carts(Cart entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung = this;
+		}
+		
+		private void detach_Carts(Cart entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung = null;
+		}
+		
+		private void attach_Carts1(Cart entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung1 = this;
+		}
+		
+		private void detach_Carts1(Cart entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung1 = null;
+		}
+		
+		private void attach_Feedbacks(Feedback entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung = this;
+		}
+		
+		private void detach_Feedbacks(Feedback entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung = null;
+		}
+		
+		private void attach_Feedbacks1(Feedback entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung1 = this;
+		}
+		
+		private void detach_Feedbacks1(Feedback entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung1 = null;
+		}
+		
+		private void attach_DonHangs(DonHang entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung = this;
+		}
+		
+		private void detach_DonHangs(DonHang entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung = null;
+		}
+		
+		private void attach_DonHangs1(DonHang entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung1 = this;
+		}
+		
+		private void detach_DonHangs1(DonHang entity)
+		{
+			this.SendPropertyChanging();
+			entity.NguoiDung1 = null;
 		}
 	}
 }

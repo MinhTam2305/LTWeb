@@ -1,0 +1,52 @@
+﻿@model Figure2.Models.NguoiDung
+
+@{
+    ViewBag.Title = "LayTT";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<br />
+<h3>Điền đầy đủ thông tin</h3>
+<br />
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div style="margin-left:50px" class="form-horizontal">
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label for="tenNguoiDung" class="form-label">Tên đầy đủ</label>
+        <input id="tenNguoiDung" name="tenNguoiDung" type="text" placeholder="" class="form-control">
+        <span class="form-message">@ViewBag.tenNguoiDung</span>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" type="text" placeholder="VD: figure@gmail.com" class="form-control">
+        <span class="form-message">@ViewBag.email </span>
+    </div>
+
+    <div class="form-group">
+        <label for="diaChi" class="form-label">
+            Địa chỉ
+        </label>
+        <input id="diaChi" name="diaChi" type="text" placeholder="" class="form-control">
+        <span class="form-message">@ViewBag.diaChi</span>
+    </div>
+
+    <div class="form-group">
+        <label for="email" class="form-label">So dien thoai</label>
+        <input id="sdt" name="sdt" type="text" placeholder="" class="form-control">
+        <span class="form-message">@ViewBag.sdt</span>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Lưu" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
