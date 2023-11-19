@@ -131,7 +131,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DanhGiaController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DanhMucController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NguoiDungController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamController.cs" />
     <Compile Include="Controllers\FigureController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
@@ -1481,8 +1484,10 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\cssFIgure\Admin.css" />
     <Content Include="Content\cssFIgure\hang-co-san.css" />
     <Content Include="Content\cssFIgure\Login.css" />
+    <Content Include="Content\cssFIgure\Register.css" />
     <Content Include="Content\cssFIgure\script.js" />
     <Content Include="Content\cssFIgure\style.css" />
     <Content Include="Content\cssFIgure\style1.css" />
@@ -1500,6 +1505,7 @@
     <Content Include="img\4.1.png" />
     <Content Include="img\4.png" />
     <Content Include="img\Anime Japanese Sunset Live Wallpaper.mp4" />
+    <Content Include="img\bgvscode.jpg" />
     <Content Include="img\button.png" />
     <Content Include="img\features\f1.png" />
     <Content Include="img\features\f2.png" />
@@ -2023,7 +2029,6 @@
     <Content Include="assets\vendors\mdi\fonts\materialdesignicons-webfont.woff" />
     <Content Include="assets\vendors\mdi\fonts\materialdesignicons-webfont.woff2" />
     <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\NavPartial.cshtml" />
     <Content Include="Areas\Admin\Views\SanPham\Index.cshtml" />
     <Content Include="Areas\Admin\Views\SanPham\Create.cshtml" />
     <Content Include="ckeditor\bender-runner.config.json" />
@@ -2062,6 +2067,22 @@
       <LastGenOutput>db.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Areas\Admin\Views\SanPham\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\SanPham\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\SanPham\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\DanhMuc\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DanhMuc\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\DanhMuc\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\DanhMuc\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\DanhMuc\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\NguoiDung\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\NguoiDung\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\NguoiDung\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\NguoiDung\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DanhGia\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DanhGia\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\DanhGia\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\DanhGia\Details.cshtml" />
     <None Include="Models\db.dbml.layout">
       <DependentUpon>db.dbml</DependentUpon>
     </None>
@@ -2106,6 +2127,7 @@
     <Content Include="Views\GioHang\XacNhanThanhToan.cshtml" />
     <Content Include="Views\GioHang\a.cshtml" />
     <Content Include="Views\GioHang\ThanhToanKhiNhaHang.cshtml" />
+    <Content Include="Views\User\DangKy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

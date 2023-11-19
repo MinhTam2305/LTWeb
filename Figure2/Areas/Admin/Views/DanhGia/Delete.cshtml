@@ -1,0 +1,59 @@
+﻿@model Figure2.Models.Feedback
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+
+<div>
+    <h4>Feedback</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idNguoiDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idNguoiDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.maSanPham)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maSanPham)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.noiDung)
+        </dt>
+
+        <dd>
+            @Html.Raw(@Model.noiDung.ToString().Replace(" ", "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.thoiGian)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.thoiGian)
+        </dd>
+
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <input type="submit" value="XÓA" class="btn btn-default" /> |
+            @Html.ActionLink("VỀ TRANG QUẢN LÝ SÁCH", "Index")
+        </div>
+    }
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maFeedback }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

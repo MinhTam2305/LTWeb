@@ -1,15 +1,16 @@
 ﻿@model Figure2.Models.Product
 
 @{
-    ViewBag.Title = "Create";
+    ViewBag.Title = "Edit";
     Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
 }
 <script src="~/ckeditor/ckeditor.js"></script>
-<h2>Thêm Figure</h2>
+<h2>Sửa thông tin</h2>
 
-@using (Html.BeginForm("Create", "SanPham", FormMethod.Post, new
+@using (Html.BeginForm("Edit", "SanPham", FormMethod.Post, new
 {
-    @enctype = "multipart/form-data"
+    @enctype =
+"multipart/form-data"
 }))
 {
     @Html.AntiForgeryToken()
@@ -18,17 +19,20 @@
     <h4>Product</h4>
     <hr />
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.maSanPham)
+
     <div class="form-group">
         <label class="control-label col-md-2">Tên sản phẩm:</label>
         <div class="col-md-10">
-            <input type="text" size="70" name="tenSanPham" value="@ViewBag.tenSanPham" required />
+            @Html.EditorFor(model => model.tenSanPham, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.tenSanPham, "", new { @class = "text-danger" })
         </div>
     </div>
 
     <div class="form-group">
         <label class="control-label col-md-2">Mô tả:</label>
         <div class="col-md-10">
-<textarea name="sMoTa" id="mota">@ViewBag.MoTa</textarea>
+            <textarea name="sMoTa" id="mota">@Model.moTa</textarea>
             <script>CKEDITOR.replace('mota');</script>
         </div>
     </div>
@@ -36,39 +40,42 @@
     <div class="form-group">
         <label class="control-label col-md-2">Giá:</label>
         <div class="col-md-10">
-            <input type="number" min="1" required name="gia" value="@ViewBag.gia" />
+            @Html.EditorFor(model => model.gia, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.gia, "", new { @class = "text-danger" })
         </div>
     </div>
 
     <div class="form-group">
         <label class="control-label col-md-2">Số lượng:</label>
         <div class="col-md-10">
-            <input type="number" min="1" required name="SoLuong"
-                   value="@ViewBag.SoLuong" />
+            @Html.EditorFor(model => model.soLuong, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.soLuong, "", new { @class = "text-danger" })
         </div>
     </div>
-    <br />
-    <div class="col-md-10">
-        @Html.DropDownList("maDanhMuc")
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Danh mục:</label>
+        <div class="col-md-10">
+            @Html.DropDownList("maDanhMuc")
+        </div>
     </div>
-    <br />
+
     <div class="form-group">
         <label class="control-label col-md-2">Ảnh bìa:</label>
         <div class="col-md-10">
             <input type="file" name="fFileUpload" />
-            @*Thông báo lỗi yêu cầu phải chọn ảnh bìa*@
-            @ViewBag.ThongBao
+            <img src="~/img/products/@Model.anh" width="120"> (Ảnh hiện tại)
         </div>
     </div>
-    <br />
+
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Thêm" class="btn btn-default" />
+            <input type="submit" value="Lưu" class="btn btn-default" />
         </div>
     </div>
 </div>
 }
 
 <div>
-    @Html.ActionLink("Về trang quản lý FIgure", "Index")
+    @Html.ActionLink("Back to List", "Index")
 </div>

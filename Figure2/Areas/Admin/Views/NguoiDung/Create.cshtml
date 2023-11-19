@@ -1,0 +1,60 @@
+﻿@model Figure2.Models.NguoiDung
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Tạo tài khoản người dùng</h2>
+<h2 style="color:red">@ViewBag.ThongBao</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label for="tenNguoiDung" class="form-label">Tên đầy đủ</label>
+        <input id="tenNguoiDung" name="tenNguoiDung" type="text" placeholder="" class="form-control">
+        <span class="form-message">@ViewData["err1"]</span>
+    </div>
+    <div class="form-group">
+        <label for="taiKhoan" class="form-label">Tài khoản</label>
+        <input id="taiKhoan" name="taiKhoan" type="text" placeholder="" class="form-control">
+        <span class="form-message">@ViewData["err2"]</span>
+    </div>
+    <div class="form-group">
+        <label for="diaChi" class="form-label">
+            Địa chỉ
+        </label>
+        <input id="diaChi" name="diaChi" type="text" placeholder="" class="form-control">
+        <span class="form-message"></span>
+    </div>
+    <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" type="text" placeholder="VD: figure@gmail.com" class="form-control">
+        <span class="form-message">@ViewData["err5"]</span>
+    </div>
+    <div class="form-group">
+        <label for="email" class="form-label">So dien thoai</label>
+        <input id="sdt" name="sdt" type="text" placeholder="" class="form-control">
+        <span class="form-message">@ViewData["err6"]</span>
+    </div>
+
+    <div class="form-group">
+        <label for="password" class="form-label">Mật khẩu</label>
+        <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+        <span class="form-message">@ViewData["err3"]</span>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Thêm tài khoản" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

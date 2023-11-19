@@ -1,0 +1,27 @@
+﻿@model Figure2.Models.Category
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Category</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Tên danh mục
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenDanhMuc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maDanhMuc }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

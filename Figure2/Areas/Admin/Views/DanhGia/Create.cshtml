@@ -1,0 +1,60 @@
+﻿@model Figure2.Models.Feedback
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+<script src="~/ckeditor/ckeditor.js"></script>
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "DanhGia", FormMethod.Post, new
+{
+    @enctype = "multipart/form-data"
+}))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>Feedback</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="control-label col-md-2">ID Người dùng:</label>
+        <div class="col-md-10">
+            @Html.DropDownList("idNguoiDung")
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Mã sản phẩm:</label>
+        <div class="col-md-10">
+            @Html.DropDownList("maSanPham")
+        </div>
+    </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Nội dung:</label>
+                <div class="col-md-10">
+        <textarea name="noiDung" id="mota">@ViewBag.NoiDung</textarea>
+                    <script>CKEDITOR.replace('mota');</script>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Thời gian:</label>
+                <div class="col-md-10">
+                    <input type="datetime-local"  required name="thoiGian"
+                           value="@ViewBag.thoiGian"/>
+                </div>
+            </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

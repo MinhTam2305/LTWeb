@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Figure2.Models.Feedback>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+           ID Người Dùng
+        </th>
+        <th>
+         Mã sản phẩm
+        </th>
+        <th>
+          Nội dung
+        </th>
+        <th>
+          Thời gian
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NguoiDung.tenNguoiDung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.tenSanPham)
+        </td>
+        <td>
+            @Html.Raw(item.noiDung.ToString().Replace(" ", "</p><p>&nbsp&nbsp&nbsp&nbsp&nbsp"))
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.thoiGian)
+        </td>
+        <td>
+            @Html.ActionLink("Sửa", "Edit", new { id=item.maFeedback }) |
+            @Html.ActionLink("Xem", "Details", new { id=item.maFeedback }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.maFeedback })
+        </td>
+    </tr>
+}
+
+</table>

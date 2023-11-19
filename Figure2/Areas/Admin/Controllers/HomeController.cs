@@ -34,9 +34,10 @@ namespace Figure2.Areas.Admin.Controllers
             //Gán giá trị cho đối tượng được tạo mới (ad)
             ADMIN ad = db.ADMINs.SingleOrDefault(n => n.TenDN == sTenDN && n.MatKhau
             == sMatKhau);
-            Session["HoTen"] = ad.TenDN;
+         
             if (ad != null)
             {
+                Session["HoTen"] = ad.TenDN;
                 Session["Admin"] = ad;
                 return RedirectToAction("Index", "Home");
             }

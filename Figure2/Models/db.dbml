@@ -9,23 +9,6 @@
       <Column Name="Quyen" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Product" Member="Products">
-    <Type Name="Product">
-      <Column Name="maSanPham" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="tenSanPham" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="moTa" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="gia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="soLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="danhMuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="anh" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="Product_Feedback" Member="Feedbacks" ThisKey="maSanPham" OtherKey="maSanPham" Type="Feedback" />
-      <Association Name="Product_Feedback1" Member="Feedbacks1" ThisKey="maSanPham" OtherKey="maSanPham" Type="Feedback" />
-      <Association Name="Product_OrderDetail" Member="OrderDetails" ThisKey="maSanPham" OtherKey="maSanPham" Type="OrderDetail" />
-      <Association Name="Product_OrderDetail1" Member="OrderDetails1" ThisKey="maSanPham" OtherKey="maSanPham" Type="OrderDetail" />
-      <Association Name="Category_Product" Member="Category" ThisKey="danhMuc" OtherKey="maDanhMuc" Type="Category" IsForeignKey="true" />
-      <Association Name="Category_Product1" Member="Category1" ThisKey="danhMuc" OtherKey="maDanhMuc" Type="Category" IsForeignKey="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.Cart" Member="Carts">
     <Type Name="Cart">
       <Column Name="maGioHang" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -49,27 +32,10 @@
       <Column Name="maSanPham" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="noiDung" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
       <Column Name="thoiGian" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Association Name="Product_Feedback" Member="Product" ThisKey="maSanPham" OtherKey="maSanPham" Type="Product" IsForeignKey="true" />
-      <Association Name="Product_Feedback1" Member="Product1" ThisKey="maSanPham" OtherKey="maSanPham" Type="Product" IsForeignKey="true" />
       <Association Name="NguoiDung_Feedback" Member="NguoiDung" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="NguoiDung" IsForeignKey="true" />
       <Association Name="NguoiDung_Feedback1" Member="NguoiDung1" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="NguoiDung" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.NguoiDung" Member="NguoiDungs">
-    <Type Name="NguoiDung">
-      <Column Name="idNguoiDung" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="tenNguoiDung" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="diaChi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
-      <Column Name="matKhau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="soDienThoai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="loaiTaiKhoan" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="NguoiDung_Cart" Member="Carts" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="Cart" />
-      <Association Name="NguoiDung_Cart1" Member="Carts1" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="Cart" />
-      <Association Name="NguoiDung_Feedback" Member="Feedbacks" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="Feedback" />
-      <Association Name="NguoiDung_Feedback1" Member="Feedbacks1" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="Feedback" />
-      <Association Name="NguoiDung_DonHang" Member="DonHangs" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="DonHang" />
-      <Association Name="NguoiDung_DonHang1" Member="DonHangs1" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="DonHang" />
+      <Association Name="Product_Feedback" Member="Product" ThisKey="maSanPham" OtherKey="maSanPham" Type="Product" IsForeignKey="true" />
+      <Association Name="Product_Feedback1" Member="Product1" ThisKey="maSanPham" OtherKey="maSanPham" Type="Product" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.OrderDetail" Member="OrderDetails">
@@ -79,10 +45,10 @@
       <Column Name="maSanPham" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="soLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="DonGia" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
-      <Association Name="Product_OrderDetail" Member="Product" ThisKey="maSanPham" OtherKey="maSanPham" Type="Product" IsForeignKey="true" />
-      <Association Name="Product_OrderDetail1" Member="Product1" ThisKey="maSanPham" OtherKey="maSanPham" Type="Product" IsForeignKey="true" />
       <Association Name="DonHang_OrderDetail" Member="DonHang" ThisKey="maDonHang" OtherKey="maDonHang" Type="DonHang" IsForeignKey="true" />
       <Association Name="DonHang_OrderDetail1" Member="DonHang1" ThisKey="maDonHang" OtherKey="maDonHang" Type="DonHang" IsForeignKey="true" />
+      <Association Name="Product_OrderDetail" Member="Product" ThisKey="maSanPham" OtherKey="maSanPham" Type="Product" IsForeignKey="true" />
+      <Association Name="Product_OrderDetail1" Member="Product1" ThisKey="maSanPham" OtherKey="maSanPham" Type="Product" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.DonHang" Member="DonHangs">
@@ -97,6 +63,40 @@
       <Association Name="DonHang_OrderDetail1" Member="OrderDetails1" ThisKey="maDonHang" OtherKey="maDonHang" Type="OrderDetail" />
       <Association Name="NguoiDung_DonHang" Member="NguoiDung" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="NguoiDung" IsForeignKey="true" />
       <Association Name="NguoiDung_DonHang1" Member="NguoiDung1" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="NguoiDung" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NguoiDung" Member="NguoiDungs">
+    <Type Name="NguoiDung">
+      <Column Name="idNguoiDung" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tenNguoiDung" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="diaChi" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="matKhau" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="soDienThoai" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="taiKhoan" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="NguoiDung_Cart" Member="Carts" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="Cart" />
+      <Association Name="NguoiDung_Cart1" Member="Carts1" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="Cart" />
+      <Association Name="NguoiDung_Feedback" Member="Feedbacks" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="Feedback" />
+      <Association Name="NguoiDung_Feedback1" Member="Feedbacks1" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="Feedback" />
+      <Association Name="NguoiDung_DonHang" Member="DonHangs" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="DonHang" />
+      <Association Name="NguoiDung_DonHang1" Member="DonHangs1" ThisKey="idNguoiDung" OtherKey="idNguoiDung" Type="DonHang" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Product" Member="Products">
+    <Type Name="Product">
+      <Column Name="maSanPham" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tenSanPham" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="moTa" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="gia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="soLuong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="danhMuc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="anh" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Product_Feedback" Member="Feedbacks" ThisKey="maSanPham" OtherKey="maSanPham" Type="Feedback" />
+      <Association Name="Product_Feedback1" Member="Feedbacks1" ThisKey="maSanPham" OtherKey="maSanPham" Type="Feedback" />
+      <Association Name="Product_OrderDetail" Member="OrderDetails" ThisKey="maSanPham" OtherKey="maSanPham" Type="OrderDetail" />
+      <Association Name="Product_OrderDetail1" Member="OrderDetails1" ThisKey="maSanPham" OtherKey="maSanPham" Type="OrderDetail" />
+      <Association Name="Category_Product" Member="Category" ThisKey="danhMuc" OtherKey="maDanhMuc" Type="Category" IsForeignKey="true" />
+      <Association Name="Category_Product1" Member="Category1" ThisKey="danhMuc" OtherKey="maDanhMuc" Type="Category" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
