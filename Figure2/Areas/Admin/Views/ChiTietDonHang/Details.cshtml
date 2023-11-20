@@ -1,0 +1,58 @@
+﻿@model Figure2.Models.OrderDetail
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã đơn hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maDonHang)
+        </dd>
+
+        <dt>
+            Mã sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maSanPham)
+        </dd>
+        <dt>
+            Tên sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.tenSanPham)
+        </dd>
+
+        <dt>
+            Số lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soLuong)
+        </dd>
+
+        <dt>
+            Đơn giá
+        </dt>
+
+        <dd>
+            @Html.FormatValue(@Model.DonGia, "{0:#,##0}") VNĐ
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maCTDonHang }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

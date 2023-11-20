@@ -15,10 +15,10 @@ namespace Figure2.Areas.Admin.Controllers
         // GET: Admin/DanhMuc
         public ActionResult Index(int? Page)
         {
-            /* if (Session["Admin"] == null)
-             {
-                 return RedirectToAction("Login", "Home");
-             }*/
+            if (Session["Admin"] == null)
+            {
+                return RedirectToAction("Login", "Home");
+            }
             int iPageNum = (Page ?? 1);
             int iPageSize = 7;
             return View(db.Categories.ToList().OrderBy(n => n.maDanhMuc).ToPagedList(iPageNum, iPageSize));

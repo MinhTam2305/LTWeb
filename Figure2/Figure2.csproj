@@ -143,8 +143,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ChiTietDonHangController.cs" />
     <Compile Include="Areas\Admin\Controllers\DanhGiaController.cs" />
     <Compile Include="Areas\Admin\Controllers\DanhMucController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DonHangController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\NguoiDungController.cs" />
     <Compile Include="Areas\Admin\Controllers\SanPhamController.cs" />
@@ -2099,6 +2101,13 @@
     <Content Include="Areas\Admin\Views\DanhGia\Create.cshtml" />
     <Content Include="Areas\Admin\Views\DanhGia\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\DanhGia\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\DonHang\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DonHang\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DonHang\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ChiTietDonHang\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ChiTietDonHang\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ChiTietDonHang\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ChiTietDonHang\Details.cshtml" />
     <None Include="Models\db.dbml.layout">
       <DependentUpon>db.dbml</DependentUpon>
     </None>
