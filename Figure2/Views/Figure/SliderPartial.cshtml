@@ -1,57 +1,148 @@
 ﻿
-<section id="hero">
-    <!--image slider start-->
-    <div class="slider">
-        <div class="slides">
-            <!--radio buttons start-->
-            <input type="radio" name="radio-btn" id="radio1">
-            <input type="radio" name="radio-btn" id="radio2">
-            <input type="radio" name="radio-btn" id="radio3">
-            <input type="radio" name="radio-btn" id="radio4">
-            <!--radio buttons end-->
-            <!--slide images start-->
-            <div class="slide first">
-                <img src="~/img/1.1.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="~/img/2.1.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="~/img/3.1.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="~/img/4.1.png" alt="">
-            </div>
-            <!--slide images end-->
-            <!--automatic navigation start-->
-            <div class="navigation-auto">
-                <div class="auto-btn1"></div>
-                <div class="auto-btn2"></div>
-                <div class="auto-btn3"></div>
-                <div class="auto-btn4"></div>
-            </div>
-            <!--automatic navigation end-->
-        </div>
-        <!--manual navigation start-->
-        <div class="navigation-manual">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
-        </div>
-        <!--manual navigation end-->
-    </div>
-    <!--image slider end-->
+  
+    <style>
+        /* CSS */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-    <script type="text/javascript">
+        #hero {
+            width: 100%;
+            height: auto;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /* Add your styling for the hero section if needed */
+        }
+
+        .slider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+        .slides {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slide {
+            width: 100vw; /* Width based on viewport width */
+        }
+
+        .hinh {
+            width: 100%;
+            height: auto;
+        }
+
+
+        .navigation-auto,
+        .navigation-manual {
+            display: flex;
+        }
+
+        .auto-btn,
+        .manual-btn,
+        .prev-btn,
+        .next-btn {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #333;
+            margin: 0 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            text-align: center;
+            line-height: 15px;
+            font-size: 12px;
+        }
+
+            .auto-btn:hover,
+            .manual-btn:hover,
+            .prev-btn:hover,
+            .next-btn:hover {
+                background-color: #555;
+            }
+
+        .prev-btn {
+            left: 5px;
+        }
+
+        .next-btn {
+            right: 5px;
+        }
+
+
+        /* JavaScript */
+       
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
             var counter = 1;
-            setInterval(function () {
-                document.getElementById('radio' + counter).checked = true;
-                counter++;
-                if (counter > 4) {
-                    counter = 1;
-                }
-            }, 5000);
-    </script>
+            var totalSlides = document.querySelectorAll('.slide').length;
+            var slideWidth = document.querySelector('.slide').clientWidth;
 
-</section>
+            setInterval(function () {
+                nextSlide();
+            }, 5000);
+
+            document.getElementById('nextBtn').addEventListener('click', function () {
+                nextSlide();
+            });
+
+            document.getElementById('prevBtn').addEventListener('click', function () {
+                prevSlide();
+            });
+
+            function nextSlide() {
+                counter = (counter % totalSlides) + 1;
+                updateSlide();
+            }
+
+            function prevSlide() {
+                counter = (counter - 2 + totalSlides) % totalSlides + 1;
+                updateSlide();
+            }
+
+            function updateSlide() {
+                document.getElementById('radio' + counter).checked = true;
+                document.querySelector('.slides').style.transform = 'translateX(' + (-slideWidth * (counter - 1)) + 'px)';
+            }
+        });</script>
+    
+
+    <section id="hero">
+        <!-- Image slider start -->
+        <div class="slider">
+            <div class="slides">
+                <!-- Radio buttons and slide images -->
+            @Html.Action("HinhSlider", "Figure")
+                <!-- Automatic navigation start -->
+                @*  <div class="navigation-auto">
+                    <div class="auto-btn" id="auto-btn1"></div>
+                    <div class="auto-btn" id="auto-btn2"></div>
+                    <div class="auto-btn" id="auto-btn3"></div>
+                    <div class="auto-btn" id="auto-btn4"></div>
+                </div>*@
+                <!-- Automatic navigation end -->
+            </div>
+            <!-- Manual navigation start -->
+          @*  <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>*@
+            <!-- Manual navigation end -->
+        </div>
+        <div class="prev-btn" id="prevBtn">&lt;</div>
+        <div class="next-btn" id="nextBtn">&gt;</div>
+        <!-- Image slider end -->
+    </section>
+

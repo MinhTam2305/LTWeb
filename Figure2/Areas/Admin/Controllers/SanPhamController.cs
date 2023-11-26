@@ -7,6 +7,8 @@ using Figure2.Models;
 using PagedList;
 using PagedList.Mvc;
 using System.IO;
+using System.Drawing;
+
 namespace Figure2.Areas.Admin.Controllers
 {
     public class SanPhamController : Controller
@@ -42,10 +44,11 @@ namespace Figure2.Areas.Admin.Controllers
             {
                 ViewBag.ThongBao = "Hay chon anh bia";
                 ViewBag.tenSanPham = f["tenSanPham"];
+                ViewBag.nhaXuatBan = f["nhaXuatBan"];
                 ViewBag.MoTa = f["sMoTa"];
                 ViewBag.SoLuong = int.Parse(f["SoLuong"]);
                 ViewBag.gia = int.Parse(f["gia"]);
-                ViewBag.maDanhMuc = new SelectList(db.Categories.ToList().OrderBy(n => n.tenDanhMuc), "maDanhMuc", "tenDanhMuc",int .Parse(f["maDanhMuc"]));
+                ViewBag.maDanhMuc = new SelectList(db.Categories.ToList().OrderBy(n => n.tenDanhMuc), "maDanhMuc", "tenDanhMuc",int.Parse(f["maDanhMuc"]));
                 return View();
             }
             else
@@ -59,8 +62,9 @@ namespace Figure2.Areas.Admin.Controllers
                         fFileUpload.SaveAs(path);
                     }
                     product.tenSanPham = f["tenSanPham"];
+                    product.nhaXuatBan = f["nhaXuatBan"];
                     product.moTa = f["sMoTa"];
-                    product.anh= sFileName;                  
+                    product.anh= sFileName;  
                     product.soLuong = int.Parse(f["soLuong"]);
                     product.gia = int.Parse(f["gia"]);
                     product.danhMuc = int.Parse(f["maDanhMuc"]);                   
@@ -129,7 +133,7 @@ namespace Figure2.Areas.Admin.Controllers
                 return null;
 
             }
-            ViewBag.maDanhMuc = new SelectList(db.Categories.ToList().OrderBy(n => n.tenDanhMuc), "maDanhMuc", "tenDanhMuc", product.maSanPham );
+            ViewBag.maDanhMuc = new SelectList(db.Categories.ToList().OrderBy(n => n.tenDanhMuc), "maDanhMuc", "tenDanhMuc", product.danhMuc);
            
             return View(product);
         }
@@ -138,32 +142,25 @@ namespace Figure2.Areas.Admin.Controllers
         public ActionResult Edit(FormCollection f, HttpPostedFileBase fFileUpload)
         {
             var product = db.Products.SingleOrDefault(n => n.maSanPham == int.Parse(f["maSanPham"]));
-            ViewBag.maDanhMuc = new SelectList(db.Categories.ToList().OrderBy(n => n.tenDanhMuc), "maDanhMuc", "tenDanhMuc", product.maSanPham);
-            if (fFileUpload == null)
-            {
-                ViewBag.ThongBao = "Hay chon anh bia";
-                ViewBag.tenSanPham = f["tenSanPham"];
-                ViewBag.moTa = f["moTa"];
-                ViewBag.soLuong = int.Parse(f["soLuong"]);
-                ViewBag.gia = decimal.Parse(f["gia"]);
-                ViewBag.maDanhMuc = new SelectList(db.Categories.ToList().OrderBy(n => n.tenDanhMuc), "maDanhMuc", "tenDanhMuc", int.Parse(f["maDanhMuc"]));
-           
-               
-            }
-            else
-            {
+            ViewBag.maDanhMuc = new SelectList(db.Categories.ToList().OrderBy(n => n.tenDanhMuc), "maDanhMuc", "tenDanhMuc", product.danhMuc);
+        
                 if (ModelState.IsValid)
                 {
+                if (fFileUpload != null)
+                { 
                     var sFileName = Path.GetFileName(fFileUpload.FileName);
                     var path = Path.Combine(Server.MapPath("~/img/products"), sFileName);
                     if (!System.IO.File.Exists(path))
                     {
                         fFileUpload.SaveAs(path);
                     }
-                    product.tenSanPham = f["tenSanPham"];
-                    product.moTa = f["moTa"];
-                    product.anh = sFileName;
 
+                    product.anh = sFileName;
+                }
+                    product.tenSanPham = f["tenSanPham"];
+                    product.moTa = f["sMoTa"];
+                   
+                    product.nhaXuatBan = f["nhaXuatBan"];
                     product.soLuong = int.Parse(f["soLuong"]);
                     product.gia = int.Parse(f["gia"]);
                     product.danhMuc = int.Parse(f["maDanhMuc"]);
@@ -171,7 +168,7 @@ namespace Figure2.Areas.Admin.Controllers
                     return RedirectToAction("Index");
                     
                 }
-            }
+            
             return View(product);
 
         }

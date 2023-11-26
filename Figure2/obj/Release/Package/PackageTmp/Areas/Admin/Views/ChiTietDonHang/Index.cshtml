@@ -1,0 +1,65 @@
+﻿@using Figure2.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<Figure2.Models.OrderDetail>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2 style="text-align:center">Quản lý chi tiết đơn hàng</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+          Mã đơn hàng
+        </th>
+        <th>
+           Sản phẩm
+        </th>
+        <th>
+           Số lượng
+        </th>
+        <th>
+          Đơn giá
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.maDonHang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Product.tenSanPham)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.soLuong)
+            </td>
+            <td>
+                @Html.FormatValue(item.DonGia, "{0:#,##0}")
+            </td>
+            <td>
+                @Html.ActionLink("Xem", "Details", new { id = item.maCTDonHang }) |
+                @Html.ActionLink("Xóa", "Delete", new { id = item.maCTDonHang }) |
+                @Html.ActionLink("Sửa", "Edit", new { id = item.maCTDonHang }) 
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    Trang @(Model.PageCount < Model.PageNumber ? 0 :Model.PageNumber)/@Model.PageCount
+    <div class="MenuTrang">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+    </div>
+</div>
+<style>
+    .MenuTrang {
+        display: inline;
+        text-align: center;
+    }
+</style>

@@ -42,7 +42,7 @@
         <div class="col-md-8">
             <h2>Tên sản phẩm: @Model.tenSanPham</h2>
             <p>Mô tả sản phẩm chi tiết: @Model.moTa</p>
-            <p>Giá: @Model.gia</p>
+            <p>Giá: @string.Format("{0:#,##0,0}", Model.gia) VND</p>
             <div class="form-inline">
                 <a href="@Url.Action("ThemGioHang", "GioHang", new { ms = Model.maSanPham, url = Request.Url.ToString() })">
                     <i class="fal fa-shopping-cart cart"></i>

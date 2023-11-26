@@ -1,0 +1,12 @@
+﻿@{
+    int i = 1;
+    foreach (var anh in Model)
+    {
+        <input type="radio" name="radio-btn" id="@($"radio{i}")">
+        <div class="slide">
+            <img class="hinh" src="~/img/@anh.anh" alt="">
+        </div>
+        i++;
+    }
+}
+

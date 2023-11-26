@@ -81,3 +81,9 @@ C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\obj\Release\Figure2.csproj.CoreCom
 C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\obj\Release\Figure2.csproj.CopyComplete
 C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\obj\Release\Figure2.dll
 C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\obj\Release\Figure2.pdb
+C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\Facebook.dll
+C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\GoogleAuthentication.dll
+C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\log4net.dll
+C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\QRCoder.dll
+C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\Facebook.xml
+C:\Users\tam20\Documents\GitHub\LTWeb\Figure2\bin\log4net.xml

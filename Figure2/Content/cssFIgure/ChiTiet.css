@@ -1,0 +1,42 @@
+﻿.MenuTrang {
+    display: inline;
+    text-align: center;
+}
+
+.custom-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-header {
+    padding: 10px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+.custom-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+

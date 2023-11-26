@@ -5,12 +5,60 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\tam20\Desktop\New folder</_PublishTargetUrl>
-    <History>True|2023-11-16T18:37:24.3607990Z;</History>
+    <History>True|2023-11-20T03:23:20.5117942Z;True|2023-11-17T01:37:24.3607990+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Areas/Admin/Views/ChiTietDonHang/Delete.cshtml">
+      <publishTime>11/20/2023 09:59:17</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/ChiTietDonHang/Details.cshtml">
+      <publishTime>11/20/2023 10:16:34</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/ChiTietDonHang/Edit.cshtml">
+      <publishTime>11/20/2023 10:08:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/ChiTietDonHang/Index.cshtml">
+      <publishTime>11/20/2023 10:17:11</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DanhGia/Create.cshtml">
+      <publishTime>11/19/2023 19:05:20</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DanhGia/Delete.cshtml">
+      <publishTime>11/19/2023 19:21:38</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DanhGia/Details.cshtml">
+      <publishTime>11/19/2023 19:20:12</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DanhGia/Index.cshtml">
+      <publishTime>11/20/2023 00:32:43</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DanhMuc/Create.cshtml">
+      <publishTime>11/19/2023 16:19:00</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DanhMuc/Delete.cshtml">
+      <publishTime>11/19/2023 16:13:40</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DanhMuc/Details.cshtml">
+      <publishTime>11/19/2023 16:13:08</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DanhMuc/Edit.cshtml">
+      <publishTime>11/19/2023 16:23:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DanhMuc/Index.cshtml">
+      <publishTime>11/19/2023 16:12:48</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DonHang/Delete.cshtml">
+      <publishTime>11/20/2023 09:51:47</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DonHang/Edit.cshtml">
+      <publishTime>11/20/2023 09:47:03</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DonHang/Index.cshtml">
+      <publishTime>11/20/2023 09:53:12</publishTime>
+    </File>
     <File Include="Areas/Admin/Views/Home/Index.cshtml">
-      <publishTime>10/24/2023 15:38:24</publishTime>
+      <publishTime>11/18/2023 10:35:52</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Home/Login.cshtml">
       <publishTime>10/24/2023 11:12:33</publishTime>
@@ -18,14 +66,35 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Areas/Admin/Views/Home/NavPartial.cshtml">
       <publishTime>10/24/2023 16:19:09</publishTime>
     </File>
+    <File Include="Areas/Admin/Views/NguoiDung/Create.cshtml">
+      <publishTime>11/19/2023 16:46:48</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/NguoiDung/Delete.cshtml">
+      <publishTime>11/19/2023 17:02:49</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/NguoiDung/Edit.cshtml">
+      <publishTime>11/19/2023 17:22:30</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/NguoiDung/Index.cshtml">
+      <publishTime>11/19/2023 17:03:57</publishTime>
+    </File>
     <File Include="Areas/Admin/Views/SanPham/Create.cshtml">
-      <publishTime>10/24/2023 20:14:42</publishTime>
+      <publishTime>11/19/2023 15:43:19</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/SanPham/Delete.cshtml">
+      <publishTime>11/19/2023 15:47:34</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/SanPham/Details.cshtml">
+      <publishTime>11/19/2023 15:40:07</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/SanPham/Edit.cshtml">
+      <publishTime>11/19/2023 15:15:21</publishTime>
     </File>
     <File Include="Areas/Admin/Views/SanPham/Index.cshtml">
-      <publishTime>10/24/2023 16:46:43</publishTime>
+      <publishTime>11/20/2023 09:02:17</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/LayoutAdmin.cshtml">
-      <publishTime>10/24/2023 16:19:09</publishTime>
+      <publishTime>11/19/2023 16:02:38</publishTime>
     </File>
     <File Include="Areas/Admin/Views/web.config">
       <publishTime>10/24/2023 04:13:43</publishTime>
@@ -3141,11 +3210,20 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/Antlr3.Runtime.pdb">
       <publishTime>09/11/2013 06:29:20</publishTime>
     </File>
+    <File Include="bin/Facebook.dll">
+      <publishTime>04/13/2015 22:48:00</publishTime>
+    </File>
     <File Include="bin/Figure2.dll">
-      <publishTime>11/17/2023 01:37:10</publishTime>
+      <publishTime>11/20/2023 10:23:12</publishTime>
     </File>
     <File Include="bin/Figure2.pdb">
-      <publishTime>11/17/2023 01:37:10</publishTime>
+      <publishTime>11/20/2023 10:23:12</publishTime>
+    </File>
+    <File Include="bin/GoogleAuthentication.dll">
+      <publishTime>01/30/2022 22:20:18</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>07/25/2022 14:40:06</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>09/06/2018 06:10:50</publishTime>
@@ -3154,13 +3232,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>07/26/2012 01:48:56</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>04/22/2019 15:06:16</publishTime>
+      <publishTime>03/18/2021 03:03:36</publishTime>
     </File>
     <File Include="bin/PagedList.dll">
       <publishTime>10/01/2013 00:36:38</publishTime>
     </File>
     <File Include="bin/PagedList.Mvc.dll">
       <publishTime>10/01/2013 01:15:20</publishTime>
+    </File>
+    <File Include="bin/QRCoder.dll">
+      <publishTime>12/12/2021 19:30:50</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>08/08/2018 19:38:48</publishTime>
@@ -4734,6 +4815,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="ckeditor/vendor/promise.js">
       <publishTime>10/24/2023 17:48:23</publishTime>
     </File>
+    <File Include="Code2Night.jpeg">
+      <publishTime>11/19/2023 20:53:53</publishTime>
+    </File>
     <File Include="Content/bootstrap-theme.css">
       <publishTime>09/18/2023 08:56:58</publishTime>
     </File>
@@ -4758,11 +4842,17 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="Content/bootstrap.min.css.map">
       <publishTime>09/18/2023 08:56:58</publishTime>
     </File>
+    <File Include="Content/cssFIgure/Admin.css">
+      <publishTime>11/19/2023 14:38:35</publishTime>
+    </File>
     <File Include="Content/cssFIgure/hang-co-san.css">
       <publishTime>10/03/2023 08:46:53</publishTime>
     </File>
     <File Include="Content/cssFIgure/Login.css">
       <publishTime>11/15/2023 23:26:05</publishTime>
+    </File>
+    <File Include="Content/cssFIgure/Register.css">
+      <publishTime>11/19/2023 02:22:13</publishTime>
     </File>
     <File Include="Content/cssFIgure/script.js">
       <publishTime>10/03/2023 09:17:14</publishTime>
@@ -4826,6 +4916,9 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     </File>
     <File Include="img/Anime Japanese Sunset Live Wallpaper.mp4">
       <publishTime>09/18/2023 09:00:47</publishTime>
+    </File>
+    <File Include="img/bgvscode.jpg">
+      <publishTime>03/24/2023 20:24:43</publishTime>
     </File>
     <File Include="img/button.png">
       <publishTime>09/18/2023 09:00:47</publishTime>
@@ -5947,7 +6040,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/18/2023 09:00:47</publishTime>
     </File>
     <File Include="Models/db.dbml">
-      <publishTime>11/14/2023 21:35:39</publishTime>
+      <publishTime>11/20/2023 00:18:17</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>09/18/2023 08:56:58</publishTime>
@@ -5989,64 +6082,100 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/18/2023 08:57:00</publishTime>
     </File>
     <File Include="Views/Figure/ChiTietFigure.cshtml">
-      <publishTime>11/16/2023 00:15:35</publishTime>
+      <publishTime>11/17/2023 22:10:27</publishTime>
     </File>
     <File Include="Views/Figure/FeekBacK.cshtml">
-      <publishTime>11/16/2023 00:09:44</publishTime>
+      <publishTime>11/20/2023 01:12:39</publishTime>
     </File>
     <File Include="Views/Figure/HangCoSan.cshtml">
       <publishTime>11/14/2023 01:01:41</publishTime>
     </File>
     <File Include="Views/Figure/HeaderPartial.cshtml">
-      <publishTime>11/16/2023 00:00:00</publishTime>
+      <publishTime>11/19/2023 22:11:53</publishTime>
     </File>
     <File Include="Views/Figure/Index.cshtml">
       <publishTime>11/14/2023 01:31:16</publishTime>
     </File>
     <File Include="Views/Figure/ItemNendoroid.cshtml">
-      <publishTime>11/14/2023 01:34:51</publishTime>
+      <publishTime>11/17/2023 22:11:43</publishTime>
     </File>
     <File Include="Views/Figure/ItemPatrial.cshtml">
       <publishTime>11/14/2023 00:35:33</publishTime>
     </File>
     <File Include="Views/Figure/ItemSanPhamCoSan.cshtml">
-      <publishTime>11/14/2023 01:34:44</publishTime>
+      <publishTime>11/17/2023 22:12:24</publishTime>
     </File>
     <File Include="Views/Figure/ItemSanPhamOrder.cshtml">
-      <publishTime>11/14/2023 01:34:52</publishTime>
+      <publishTime>11/17/2023 23:27:20</publishTime>
     </File>
     <File Include="Views/Figure/SliderPartial.cshtml">
       <publishTime>09/18/2023 09:31:04</publishTime>
     </File>
+    <File Include="Views/GioHang/a.cshtml">
+      <publishTime>11/17/2023 21:03:38</publishTime>
+    </File>
     <File Include="Views/GioHang/DatHang.cshtml">
-      <publishTime>10/13/2023 21:01:09</publishTime>
+      <publishTime>11/19/2023 23:41:33</publishTime>
     </File>
     <File Include="Views/GioHang/GioHang.cshtml">
-      <publishTime>10/10/2023 14:37:20</publishTime>
+      <publishTime>11/17/2023 19:41:31</publishTime>
     </File>
     <File Include="Views/GioHang/GioHangPartial.cshtml">
       <publishTime>10/10/2023 14:38:02</publishTime>
     </File>
+    <File Include="Views/GioHang/LayTT.cshtml">
+      <publishTime>11/19/2023 23:24:21</publishTime>
+    </File>
+    <File Include="Views/GioHang/ThanhToanKhiNhaHang.cshtml">
+      <publishTime>11/17/2023 22:07:46</publishTime>
+    </File>
+    <File Include="Views/GioHang/VnpayReturn.cshtml">
+      <publishTime>11/17/2023 20:28:29</publishTime>
+    </File>
     <File Include="Views/GioHang/XacNhanDonHang.cshtml">
-      <publishTime>10/13/2023 20:46:51</publishTime>
+      <publishTime>11/19/2023 23:57:45</publishTime>
+    </File>
+    <File Include="Views/GioHang/XacNhanThanhToan.cshtml">
+      <publishTime>11/17/2023 22:01:18</publishTime>
     </File>
     <File Include="Views/Shared/FooterPatrial.cshtml">
-      <publishTime>11/16/2023 22:54:09</publishTime>
+      <publishTime>11/17/2023 04:18:30</publishTime>
     </File>
     <File Include="Views/Shared/Layout.cshtml">
       <publishTime>11/16/2023 22:53:20</publishTime>
     </File>
     <File Include="Views/TimKiem/TimKiem.cshtml">
-      <publishTime>10/07/2023 10:30:56</publishTime>
+      <publishTime>11/17/2023 23:27:08</publishTime>
+    </File>
+    <File Include="Views/User/DangKy.cshtml">
+      <publishTime>11/19/2023 02:20:37</publishTime>
     </File>
     <File Include="Views/User/DangNhap.cshtml">
-      <publishTime>11/15/2023 23:53:19</publishTime>
+      <publishTime>11/20/2023 00:12:35</publishTime>
+    </File>
+    <File Include="Views/User/DoiMKThanhCong.cshtml">
+      <publishTime>11/20/2023 00:28:13</publishTime>
+    </File>
+    <File Include="Views/User/Edit.cshtml">
+      <publishTime>11/19/2023 20:45:55</publishTime>
+    </File>
+    <File Include="Views/User/ForgotPassword.cshtml">
+      <publishTime>11/20/2023 00:25:25</publishTime>
+    </File>
+    <File Include="Views/User/GuiEmailThanhCong.cshtml">
+      <publishTime>11/20/2023 00:26:05</publishTime>
+    </File>
+    <File Include="Views/User/ResetPassword.cshtml">
+      <publishTime>11/20/2023 00:27:52</publishTime>
+    </File>
+    <File Include="Views/User/TTUser.cshtml">
+      <publishTime>11/19/2023 20:38:54</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>09/18/2023 08:56:56</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>11/17/2023 01:37:11</publishTime>
+      <publishTime>11/20/2023 10:23:13</publishTime>
     </File>
   </ItemGroup>
 </Project>

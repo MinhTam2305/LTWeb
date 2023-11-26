@@ -1,4 +1,7 @@
-﻿<div class="pro-container">
+﻿@using Figure2.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<Figure2.Models.Product>
+<div class="pro-container">
     @foreach (var product in Model)
     {
         <div class="pro">
@@ -15,12 +18,15 @@
                     <i class="fas fa-star"></i>
                     <i class="fas fa-star"></i>
                 </div>
-                <h4><a href="@Url.Action("ChiTietFigure", "Figure", new { id = product.maSanPham })"> @string.Format("{0:#,##0,0}", @product.gia)</a></h4>
+                <h4><a href="@Url.Action("ChiTietFigure", "Figure", new { id = product.maSanPham })">@string.Format("{0:#,##0,0}", @product.gia)</a></h4>
             </div>
             <a href="@Url.Action("ThemGioHang","GioHang", new { ms = product.maSanPham, url =Request.Url.ToString() })">
                 <i class="fal fa-shopping-cart cart"></i>
             </a>
         </div>
     }
+</div>
+<div class="right-align">
+    <a href="~/XemChiTietDanhMuc/Index/3" id="myLink">Xem tất cả</a>
 </div>
 

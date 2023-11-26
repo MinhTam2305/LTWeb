@@ -116,7 +116,6 @@ namespace Figure2.Controllers
         public ActionResult LayTT()
         {
             return View();
-
         }
 
         [HttpPost]

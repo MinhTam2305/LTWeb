@@ -23,27 +23,22 @@
                 <a href="contact.html">Liên hệ</a>
             </li>
             <li>
-                @using (Html.BeginForm("TimKiem", "TimKiem", FormMethod.Get, new { @class = "navbar-form navbar-right", @role = "search" }))
-                {
 
+                <form class="sbox" action="~/TimKiem/TimKiem" method="get">
+                    
+                    <input class="stext" type="text" id="search" name="q" placeholder="Tìm kiếm">
+                    <button type="submit" class="sbutton">Tìm</button>
 
-                    <input type="text" class="form-control" placeholder="Tìm kiếm" name="strSearch">
+                    </form>
 
-                    <button type="submit" class="btn btn-default">Tìm</button>
-
-                }
             </li>
-
         </ul>
-
-       
-
 
         <ul id="navbar1">
             @if (Session["TaiKhoan"] != null)
             {
                 <li>
-                    <a>Xin chào:(^-^) @Session["HoTen"].ToString()</a>
+                    <a href="@Url.Action("TTUser","User")">Xin chào: @Session["HoTen"].ToString()</a>
                 </li>
 
                 <li>
@@ -52,6 +47,19 @@
                     </button>
                 </li>
             }
+            else if (Session["LoginGF"] != null)
+            {
+                <li>
+                    <a href="">Xin chào: @Session["HoTenGF"].ToString()</a>
+                </li>
+
+                <li>
+                    <button class="btnLogout-popup">
+                        <a href="@Url.Action("DangXuat","User" ,new {url= Request.Url.ToString()})">Đăng xuất</a>
+                    </button>
+                </li>
+            }
+
             else
             {
 
@@ -60,9 +68,6 @@
                         <a href="@Url.Action("DangNhap","User" ,new {url= Request.Url.ToString()})">Đăng nhập</a>
                     </button>
                 </li>
-
-
-
             }
 
             <li id="lg-bag">
@@ -70,8 +75,51 @@
             </li>
 
 
-            <a href="#" id="close"><i class="far fa-times"></i></a>
+            @* <a href="#" id="close"><i class="far fa-times"></i></a>*@
         </ul>
     </div>
     
 </section>
+<style>
+
+  
+    .sbutton {
+        color: #e84118;
+       /* float: right;*/
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border:0px;
+        background: #DADADA;
+       /* display: flex;
+        justify-content: center;
+        align-items: center;*/
+        text-decoration: none;
+        transition: 0.8s;
+    }
+    .stext {
+        border: none;
+        background: none;
+        outline: none;
+        float: left;
+        padding: 0;
+        color: #555;
+        font-size: 15px;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+    }
+    .sbox:hover > .stext {
+        width: 200px;
+        padding: 0 5px;
+        border-radius: 50px;
+    }
+
+    .sbox:hover > .sbutton {
+        background: #fff;
+    }
+
+    .fa-search {
+        color: #001EFF;
+    }
+</style>

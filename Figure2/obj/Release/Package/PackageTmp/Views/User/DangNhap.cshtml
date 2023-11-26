@@ -6,7 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
     @Styles.Render("~/Content/cssFIgure/Login.css")
+    <style>
+        
+        .containerss {
+            display: flex;
+            justify-content: center; /* Căn theo chiều ngang */
+            align-items: center; /* Căn theo chiều dọc */
+        }
+        
+        .aaa {
+            margin: 0 10px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            background: #fff;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: 0.5s;
+            background: rgba(0,0,0,0);
+            color: var(--color);
+            font-size: 2.5em;
+            -webkit-box-reflect: below 5px linear-graduent(to bottom, rgba(0,0,0,0), rgba(0,0,0,4));
+        }
+
+        a:hover {
+            background: var(--color);
+            color: #050801;
+            box-shadow: 0 0 5px var(--color), 0 0 25px var(--color),0 0 50px var(--color),0 0 200px var(--color);
+        }
+    </style>
 </head>
 <body>
 
@@ -44,25 +80,47 @@
             {
                 <div class="form-group">
                     <label for="fullname" class="form-label">Tên đầy đủ</label>
-                    <input id="Username" name="Username" type="text" placeholder="Username" class="form-control" required >
+                    <input id="Username" name="Username" type="text" placeholder="Username" class="form-control" required>
                     @ViewData["Err1"]
                     <span class="form-message"></span>
                 </div>
 
                 <div class="form-group">
                     <label for="password" class="form-label">Mật khẩu</label>
-                    <input id="Password" name="Password" type="password" placeholder="Password" class="form-control"  required>
+                    <input id="Password" name="Password" type="password" placeholder="Password" class="form-control" required>
                     @ViewData["Err2"]
                     <span class="form-message"></span>
                 </div>
             }
-        <div>@Html.CheckBox("remember") <span style="font-style:italic">Nhớ thông tin đăng nhập</span></div>
-        <div><p style="font-style:italic; color:red; margin:0px;">@ViewBag.ThongBao</p></div>
+
+            <div class="text"><a href="/User/ForgotPassword">Forgot password?</a></div>
+
+            <div>@Html.CheckBox("remember") <span style="font-style:italic">Nhớ thông tin đăng nhập</span></div>
+            <div><p style="font-style:italic; color:red; margin:0px;">@ViewBag.ThongBao</p></div>
             <button class="form-submit">Đăng nhập</button>
+            <div style="text-align:center">
+
+                <span>------------Or------------</span>
+
+            </div>
+            <br />
+
+            <div class="containerss">
+                <a class="aaa" href="@ViewBag.response" style="--color: #FF0050">
+                    <i class="fa-brands fa-google"></i>
+                </a>
+
+                <a class="aaa" href="@ViewBag.Urll" style="--color: #4267B2">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+
+
+            </div>
 
             <div class="form-group">
                 <p class="register-link">Bạn không có tài khoản ?</p>
-                <a href="register.html" class="register-link">Đăng ký</a>
+                <a href="@Url.Action("DangKy","User")" class="register-link">Đăng ký</a>
             </div>
 
         </form>

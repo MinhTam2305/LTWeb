@@ -1,0 +1,81 @@
+﻿@model Figure2.Models.NguoiDung
+
+@{
+    ViewBag.Title = "EDIT";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<br />
+<h3 style="text-align:center">Sửa thông tin</h3>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <br />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.idNguoiDung)
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Tên người dùng:</label>
+        <div class="col-md-10">
+            <input type="text" name="tenNguoiDung" value="@Model.tenNguoiDung" required />
+        </div>
+    </div>
+    <br />
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Email:</label>
+        <div class="col-md-10">
+            <input type="email" name="email" value="@Model.email" required />
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <label class="control-label col-md-2">Địa chỉ:</label>
+        <div class="col-md-10">
+            <input type="text" name="diaChi" value="@Model.diaChi" required />
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <label class="control-label col-md-2">Tài khoản:</label>
+        <div class="col-md-10">
+            <input type="text" name="taiKhoan" value="@Model.taiKhoan" required />
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <label class="control-label col-md-2">Mật khẩu:</label>
+        <div class="col-md-10">
+            @*Chỉ hiển thị mã sách không cho sửa*@
+            <input type="text" name="matKhau" value="@Session["MatKhau"].ToString()" required />
+        </div>
+    </div>
+
+    <br />
+
+
+    <div class="form-group">
+        <label class="control-label col-md-2">Số điện thoại:</label>
+        <div class="col-md-10">
+            <input type="text" name="soDienThoai" value="@Model.soDienThoai" required />
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+<br />
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+<style>
+    .form-horizontal {
+        padding-left: 50px;
+    }
+</style>

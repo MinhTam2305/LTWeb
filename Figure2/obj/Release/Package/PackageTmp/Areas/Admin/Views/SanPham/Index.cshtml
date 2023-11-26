@@ -18,47 +18,46 @@
         @s.Substring(0, length)<text>...</text>
     }
 }
-
-
+<h2 style="text-align:center;">QUẢN LÝ THÔNG TIN FIGURE</h2>
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm sản phẩm", "Create")
 </p>
 <table class="table">
     <tr>
-        <th >
+        <th width="120px">
             Tên sản phẩm
         </th>
-        <th ">
+        <th style="text-align:center;width:200px">
             Mô tả
         </th>
-        <th >
-           
-            @Html.DisplayNameFor(model => model.First().gia)
+        <th>
+
+            Giá
         </th>
-        <th >
-            Số Lượng 
+        <th>
+            Số Lượng
         </th>
         <th>
             Danh mục
         </th>
-        <th >
-            @Html.DisplayNameFor(model => model.First().anh)
+        <th width="150px">
+            Hình
         </th>
-       
-        <th ></th>
+
+        <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.tenSanPham)
+                @Truncate(item.tenSanPham, 50)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.moTa)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.gia)
+                @Html.FormatValue(item.gia, "{0:#,##0}")
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.soLuong)
@@ -67,23 +66,37 @@
                 @Html.DisplayFor(modelItem => item.danhMuc)
             </td>
             <td>
-                <img src="~/img/products/@item.anh" style="width:50px;" />
+                <img src="~/img/products/@item.anh" style="width:100px;" />
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.maSanPham }) |
-                @Html.ActionLink("Details", "Details", new { id = item.maSanPham }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.maSanPham })
+
+
+                <a href="@Url.Action("Details", "SanPham",new {id=item.maSanPham})" class="btn btn-sm btn-info" name="details">
+                    <i class='bx bxs-detail'></i>
+                </a>
+                <a href="@Url.Action("Delete", "SanPham",new {id=item.maSanPham})" class="btn btn-sm btn-danger" name="update">
+                    <i class='bx bxs-message-square-x'></i>
+                </a>
+                <a href="@Url.Action("Edit", "SanPham",new {id=item.maSanPham})" class="btn btn-sm btn-warning" name="update">
+                    <i class='bx bx-cog'></i>
+                </a>
             </td>
         </tr>
     }
 
 </table>
-
-
 <div>
-    Trang @(Model.PageCount < Model.PageNumber ? 0 :
-Model.PageNumber)/@Model.PageCount
-<div class="MenuTrang">
-    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+    Trang @(Model.PageCount < Model.PageNumber ? 0 :Model.PageNumber)/@Model.PageCount
+    <div class="MenuTrang">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+    </div>
 </div>
-</div>
+<style>
+    .MenuTrang {
+        display: inline;
+        text-align: center;
+    }
+</style>
+
+
+

@@ -4,12 +4,12 @@
     ViewBag.Title = "TimKiem";
     Layout = "~/Views/Shared/Layout.cshtml";
 }
-
-<h2>TimKiem</h2>
+<br />
+<h3 style="text-align:center">Tìm kiếm</h3>
 @using (Html.BeginForm("TimKiem", "TimKiem", FormMethod.Get))
 {
     <p>
-        <input type="text" name="strSearch" value="@ViewBag.Search" placeholder="Nhập sản phẩm cần tìm..." size="100" /> <input type="submit" value="Tìm kiếm" />
+        <input type="text" name="q" value="@ViewBag.Search" placeholder="Nhập sản phẩm cần tìm..." size="100" /> <input type="submit" value="Tìm kiếm" />
     </p>
 }
 @{
@@ -19,52 +19,63 @@
         <table class="table">
             <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.tenSanPham)
+                  Tên sản phẩm
+                </th>
+                <th width="150px">
+                   Mô tả
+                </th>
+                <th width="120px">
+                  Giá
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.moTa)
+                   Số lượng
+                </th>
+                <th width="200px">
+                 Danh mục
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.gia)
+                   Ảnh
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.soLuong)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.danhMuc)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.anh)
-                </th>
-                <th></th>
+                <th width="100px"></th>
             </tr>
 
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>
+                    <td style="text-align:center">
                         @Html.DisplayFor(modelItem => item.tenSanPham)
                     </td>
-                    <td>
+                    <td style="text-align:center">
                         @Html.DisplayFor(modelItem => item.moTa)
                     </td>
-                    <td>
+                    <td style="text-align:center">
                         @Html.DisplayFor(modelItem => item.gia)
                     </td>
-                    <td>
+                    <td style="text-align:center">
                         @Html.DisplayFor(modelItem => item.soLuong)
                     </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.danhMuc)
+                    <td style="text-align:center">
+
+                        @Html.DisplayFor(modelItem => item.Category.tenDanhMuc)
                     </td>
-                    <td>
+                    <td style="text-align:center">
+
                         @Html.DisplayFor(modelItem => item.anh)
                     </td>
-                    
+                   
+                    <td style="text-align:center"><a style="color:brown" href="@Url.Action("ChiTietFigure","Figure", new {id=item.maSanPham})">Chi tiết</a></td>
+                   
+
                 </tr>
             }
             </table>
+            <br />
         }
         }
     }
 
+<style>
+    a {
+        text-decoration: none;
+    }
+</style>

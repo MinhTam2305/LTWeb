@@ -1,0 +1,76 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Register.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    @Styles.Render("~/Content/cssFIgure/Register.css")
+
+</head>
+<body>
+    <div class="box">
+        <form action="~/User/DangKy" method="POST" class="form" id="form-1">
+            <h3 class="heading">Thành viên đăng ký</h3>
+            <p class="desc">Cùng nhau trở thành wibu ❤️</p>
+            <br />
+            <h2 style="color:red">@ViewBag.ThongBao</h2>
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="tenNguoiDung" class="form-label">Tên đầy đủ</label>
+                <input id="tenNguoiDung" name="tenNguoiDung" type="text" placeholder="" class="form-control">
+                <span class="form-message">@ViewData["err1"]</span>
+            </div>
+            <div class="form-group">
+                <label for="taiKhoan" class="form-label">Tài khoản</label>
+                <input id="taiKhoan" name="taiKhoan" type="text" placeholder="" class="form-control">
+                <span class="form-message">@ViewData["err2"]</span>
+            </div>
+            <div class="form-group">
+                <label for="diaChi" class="form-label">
+                    Địa chỉ
+                </label>>
+                <input id="diaChi" name="diaChi" type="text" placeholder="" class="form-control">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="email" type="text" placeholder="VD: figure@gmail.com" class="form-control">
+                <span class="form-message">@ViewData["err5"]</span>
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-label">So dien thoai</label>
+                <input id="sdt" name="sdt" type="text" placeholder="" class="form-control">
+                <span class="form-message">@ViewData["err6"]</span>
+            </div>
+
+            <div class="form-group">
+                <label for="password" class="form-label">Mật khẩu</label>
+                <input id="password" name="password" type="password" placeholder="Nhập mật khẩu" class="form-control">
+                <span class="form-message">@ViewData["err3"]</span>
+            </div>
+
+            <div class="form-group">
+                <label for="nlPassword" class="form-label">Nhập lại mật khẩu</label>
+                <input id="nlPassword" name="nlPassword" placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+                <span class="form-message">@ViewData["err4"]</span>
+            </div>
+
+            <button type="submit" class="form-submit">Đăng ký</button>
+
+            <div class="form-group-login">
+                <a href="~/User/DangNhap" class="register-link">Đăng nhập</a>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+</html>

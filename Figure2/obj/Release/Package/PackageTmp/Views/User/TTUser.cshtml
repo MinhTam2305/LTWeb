@@ -1,0 +1,70 @@
+﻿@model Figure2.Models.NguoiDung
+
+@{
+    ViewBag.Title = "TTUser";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<br />
+<h3 style="text-align:center">Thông tin người dùng</h3>
+<br />
+<table border="1" >
+    <tr style="height:60px">
+        <th width="150px">
+            Tên người dùng
+        </th>
+        <th width="250px">
+            Email
+        </th>
+        <th  width="350px">
+            Địa chỉ
+        </th>
+        <th>
+            Số điện thoại
+        </th>
+        <th width="150px">
+            Tài khoản
+        </th>
+        <th  width="150px">
+            Mật khẩu
+        </th>
+        <th></th>
+    </tr>
+
+    
+    <tr style="height:100px;text-align:center">
+        <td>
+            @Html.DisplayFor(model => model.tenNguoiDung)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.email)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.diaChi)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.soDienThoai)
+        </td>
+        <td>
+            @Html.DisplayFor(model => model.taiKhoan)
+        </td>
+        <td>
+            @Session["MatKhau"].ToString()
+        </td>
+
+    </tr>
+    
+
+</table>
+<p>
+    @Html.ActionLink("Sửa", "Edit") |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+<style>
+    table {
+        margin: auto;
+    }
+
+    a {
+        text-decoration: none;
+    }
+</style>

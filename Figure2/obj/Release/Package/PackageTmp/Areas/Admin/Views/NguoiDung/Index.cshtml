@@ -1,0 +1,80 @@
+﻿@using Figure2.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<Figure2.Models.NguoiDung>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2 style="text-align:center">Quản lý tài khoản người dùng</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+        Tên người dùng
+        </th>
+        <th>
+          Email
+        </th>
+        <th>
+          Địa chỉ
+        </th>
+        <th>
+            Số điện thoại
+        </th>
+        <th>
+            Tài khoản
+        </th>
+        <th>
+           Mật khẩu
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.tenNguoiDung)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.diaChi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.soDienThoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.taiKhoan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.matKhau)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.idNguoiDung }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.idNguoiDung })
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    Trang @(Model.PageCount < Model.PageNumber ? 0 :
+Model.PageNumber)/@Model.PageCount
+<div class="MenuTrang">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>
+</div>
+
+<style>
+    .MenuTrang {
+        display: inline;
+        text-align: center;
+    }
+</style>

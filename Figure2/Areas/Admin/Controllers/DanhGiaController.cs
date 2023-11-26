@@ -98,11 +98,7 @@ namespace Figure2.Areas.Admin.Controllers
                 Response.StatusCode = 404;
                 return null;
 
-            }
-          
-
-
-          
+            }       
             db.Feedbacks.DeleteOnSubmit(feekback);
             db.SubmitChanges();
             return RedirectToAction("Index");

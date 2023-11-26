@@ -19,6 +19,11 @@ namespace Figure2
                             defaults: new { controller = "Figure", action = "Index", id = UrlParameter.Optional }
                         );
             routes.MapRoute(
+            name: "XemChiTietDanhMuc",
+            url: "XemChiTietDanhMuc/{action}/{id}",
+            defaults: new { controller = "XemChiTietDanhMuc", action = "Index", id = UrlParameter.Optional }
+        );
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Figure", action = "Index", id = UrlParameter.Optional }
