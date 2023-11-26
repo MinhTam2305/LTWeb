@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewBag.Title = "LienHe";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+    <style>
+        .header, .section {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+        }
+
+        .header {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .section {
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+       .h1, .h2, .h3 {
+            color: #343a40;
+        }
+
+        .p {
+            color: #6c757d;
+        }
+
+        .form {
+            margin-top: 1em;
+        }
+
+        .label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+
+        .input, .textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+
+        .button {
+            background-color: #343a40;
+            color: #fff;
+            padding: 0.5em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            .button:hover {
+                background-color: #555;
+            }
+
+        .a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .a:hover {
+                text-decoration: underline;
+            }
+    </style>
+
+    <header class="header">
+        <h1 class="h1" style="color:white">Liên Hệ - Figure Shop</h1>
+    </header>
+    <section class="section">
+        <h2 class="h2">Thông Tin Liên Hệ</h2>
+        <p class="p">Nếu bạn cần hỗ trợ hoặc có câu hỏi, hãy liên hệ với chúng tôi qua một trong các phương tiện sau:</p>
+        <ul style="padding-left:10px">
+            <li>Email: <a class="a" href="mailto:info@figureshop.com">info@figureshop.com</a></li>
+            <li>Điện thoại: +84 123 456 789</li>
+            <li>Địa chỉ: 123 Đường ABC, Thành phố XYZ, Quốc gia ABC</li>
+        </ul>
+
+        <h2 class="h2">Gửi Thư Điện Tử</h2>
+        <p>Nếu bạn có câu hỏi hoặc phản hồi, vui lòng sử dụng mẫu liên hệ dưới đây:</p>
+        <form class="form" action="#" method="post">
+            <label class="label" for="name">Họ và Tên:</label>
+            <input class="input" type="text" id="name" name="name" required>
+
+            <label class="label" for="email">Email:</label>
+            <input class="input" type="email" id="email" name="email" required>
+
+            <label class="label" for="message">Nội dung:</label>
+            <textarea class="textarea" id="message" name="message" rows="4" required></textarea>
+
+            <button class="button" type="submit">Gửi</button>
+        </form>
+    </section>
+
+

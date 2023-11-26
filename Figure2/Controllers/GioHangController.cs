@@ -231,11 +231,17 @@ namespace Figure2.Controllers
             {
                 return View("a");
             }
-
+           
             foreach (var item in lstGioHang)
             {
-
                 OrderDetail ctdh = new OrderDetail();
+
+                var product = from s in data.Products where s.maSanPham == item.iMaFigure select s;
+
+                // Assuming that product is a single product matching the condition
+                var selectedProduct = product.FirstOrDefault();
+                selectedProduct.soLuong -= item.iSoLuong;
+
                 ctdh.maDonHang = ddh.maDonHang;
                 ctdh.maSanPham = item.iMaFigure;
                 ctdh.soLuong = item.iSoLuong;

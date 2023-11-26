@@ -1,26 +1,26 @@
 ﻿
 @model Figure2.Models.Product
 <section id="header">
-    <a href="#">
+    <a href="@Url.Action("Index","Figure")">
         <img src="~/img/logo.png" class="logo">
     </a>
     <div>
         <ul id="navbar">
             <li>
-                <a class="active" href="~/Figure/Index">Trang Chủ</a>
+                <a class="active" href="@Url.Action("Index","Figure")">Trang Chủ</a>
             </li>
             <li>
-                <a href="about.html">Giới thiệu</a>
+                <a href="@Url.Action("GioiThieu","TrangMenu")">Giới thiệu</a>
             </li>
             <li>
                 @Html.Action("ItemPatrial", "Figure")
             </li>
 
             <li>
-                <a href="blog.html">Hướng dẫn</a>
+                <a href="@Url.Action("HuongDan","TrangMenu")">Hướng dẫn</a>
             </li>
             <li>
-                <a href="contact.html">Liên hệ</a>
+                <a href="@Url.Action("LienHe","TrangMenu")">Liên hệ</a>
             </li>
           
         </ul>
@@ -37,7 +37,7 @@
             @if (Session["TaiKhoan"] != null)
             {
                 <li>
-                    <a href="@Url.Action("TTUser","User")">Xin chào: @Session["HoTen"].ToString()</a>
+                    <a href="@Url.Action("TTUser","User")">Xin chào: @Session["ten"].ToString()</a>
                 </li>
 
                 <li>

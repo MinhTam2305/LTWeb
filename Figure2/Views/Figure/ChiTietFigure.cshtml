@@ -36,6 +36,7 @@
         <div class="col-md-8">
             <h2>Tên sản phẩm: @Model.tenSanPham</h2>
             <p style="color:black"><b>Chi tiết sản phẩm</b> @Html.Raw(@Model.moTa.ToString().Replace("\n", "</p><p>"))</p>
+            <p style="color:black">Số lượng: @Model.soLuong</p>
             <p>Giá: @string.Format("{0:#,##0,0}", Model.gia) VND</p>
             <div class="form-inline">
                 <a href="@Url.Action("ThemGioHang", "GioHang", new { ms = Model.maSanPham, url = Request.Url.ToString() })">

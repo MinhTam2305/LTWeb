@@ -155,6 +155,7 @@
     <Compile Include="Controllers\FigureController.cs" />
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\TimKiemController.cs" />
+    <Compile Include="Controllers\TrangMenuController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\XemChiTietDanhMucController.cs" />
     <Compile Include="Global.asax.cs">
@@ -2174,10 +2175,14 @@
     <Content Include="Views\XemChiTietDanhMuc\Index.cshtml" />
     <Content Include="Views\XemChiTietDanhMuc\TangDan.cshtml" />
     <Content Include="Views\XemChiTietDanhMuc\GiamDan.cshtml" />
+    <Content Include="Views\TrangMenu\GioiThieu.cshtml" />
+    <Content Include="Views\TrangMenu\HuongDan.cshtml" />
+    <Content Include="Views\TrangMenu\LienHe.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Views\TrangTin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -14,10 +14,10 @@ namespace Figure2.Areas.Admin.Controllers
        
         public ActionResult Index(int? Page)
         {
-           /* if (Session["Admin"] == null)
+            if (Session["Admin"] == null)
             {
                 return RedirectToAction("Login", "Home");
-            }*/
+            }
             int iPageNum = (Page ?? 1);
             int iPageSize = 7;
             return View(db.OrderDetails.ToList().OrderBy(n => n.maCTDonHang).ToPagedList(iPageNum, iPageSize));

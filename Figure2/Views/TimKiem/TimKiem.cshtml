@@ -6,12 +6,8 @@
 }
 <br />
 <h3 style="text-align:center">Tìm kiếm</h3>
-@using (Html.BeginForm("TimKiem", "TimKiem", FormMethod.Get))
-{
-    <p>
-        <input type="text" name="q" value="@ViewBag.Search" placeholder="Nhập sản phẩm cần tìm..." size="100" /> <input type="submit" value="Tìm kiếm" />
-    </p>
-}
+<br />
+
 @{
     if (Model != null)
     {
@@ -21,10 +17,10 @@
                 <th>
                   Tên sản phẩm
                 </th>
-                <th width="150px">
+                <th width="250px">
                    Mô tả
                 </th>
-                <th width="120px">
+                <th width="200px">
                   Giá
                 </th>
                 <th>
@@ -33,7 +29,7 @@
                 <th width="200px">
                  Danh mục
                 </th>
-                <th>
+                <th >
                    Ảnh
                 </th>
                 <th width="100px"></th>
@@ -46,10 +42,11 @@
                         @Html.DisplayFor(modelItem => item.tenSanPham)
                     </td>
                     <td style="text-align:center">
-                        @Html.DisplayFor(modelItem => item.moTa)
+                      
+                        @Html.Raw(item.moTa.ToString().Replace("\n", "</p><p>"))
                     </td>
                     <td style="text-align:center">
-                        @Html.DisplayFor(modelItem => item.gia)
+                        @Html.FormatValue(item.gia, "{0:#,##0}") VNĐ
                     </td>
                     <td style="text-align:center">
                         @Html.DisplayFor(modelItem => item.soLuong)
@@ -58,9 +55,9 @@
 
                         @Html.DisplayFor(modelItem => item.Category.tenDanhMuc)
                     </td>
-                    <td style="text-align:center">
+                    <td style="text-align:center" >
 
-                        @Html.DisplayFor(modelItem => item.anh)
+                        <img width="140" src="~/img/products/@item.anh" alt="@item.tenSanPham">
                     </td>
                    
                     <td style="text-align:center"><a style="color:brown" href="@Url.Action("ChiTietFigure","Figure", new {id=item.maSanPham})">Chi tiết</a></td>

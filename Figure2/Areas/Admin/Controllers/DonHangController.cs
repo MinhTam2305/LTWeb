@@ -13,11 +13,11 @@ namespace Figure2.Areas.Admin.Controllers
         dbDataContext db = new dbDataContext();
         // GET: Admin/DonHang
         public ActionResult Index(int? Page)
-        { 
-            /*if (Session["Admin"] == null)
+        {
+            if (Session["Admin"] == null)
             {
                 return RedirectToAction("Login", "Home");
-            }*/
+            }
             int iPageNum = (Page ?? 1);
             int iPageSize = 7;
          

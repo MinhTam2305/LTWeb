@@ -17,10 +17,10 @@ namespace Figure2.Areas.Admin.Controllers
         // GET: Admin/Slider
         public ActionResult Index(int? page)
         {
-          /*  if (Session["Admin"] == null)
+            if (Session["Admin"] == null)
             {
                 return RedirectToAction("Login", "Home");
-            }*/
+            }
             int iPageNum = (page ?? 1);
             int iPageSize = 7;
             return View(db.Sliders.ToList().OrderBy(n => n.maHinh).ToPagedList(iPageNum, iPageSize));

@@ -67,8 +67,9 @@ namespace Figure2.Controllers
                 {
                     ViewBag.ThongBao = "dang nhap thanh cong";
                     Session["TaiKhoan"] = kh;
-                    Session["HoTen"] = kh.tenNguoiDung;
+                    Session["ten"] = kh.tenNguoiDung;
                     Session["id"] = kh.idNguoiDung;
+                    Session["email"] = kh.email;
                     Session["MatKhau"] = sMatKhau;
                     if (f["remember"].Contains("true"))
                     {
