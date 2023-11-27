@@ -65,7 +65,7 @@ namespace Figure2.Areas.Admin.Controllers
         [HttpGet]
         public ActionResult Create()
         {
-           
+
             return View();
         }
         [HttpPost]
@@ -92,17 +92,17 @@ namespace Figure2.Areas.Admin.Controllers
                     using (var graphics = Graphics.FromImage(croppedImage))
                     {
                         graphics.DrawImage(originalImage, new Rectangle(0, 0, width, height), new Rectangle(x, y, width, height), GraphicsUnit.Pixel);
-                        croppedImage.Save(croppedImagePath, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        croppedImage.Save(croppedImagePath, System.Drawing.Imaging.ImageFormat.Png);
                     }
 
-                    // Clean up: Delete the temporary uploaded file
-                    System.IO.File.Delete(tempImagePath);
-                   
-                       
+                  
+
                         slider.anh = sFileName;
                         db.Sliders.InsertOnSubmit(slider);
                         db.SubmitChanges();
-                        return RedirectToAction("Index");                  
+                        System.IO.File.Delete(tempImagePath);
+                        return RedirectToAction("Index");
+                    
                 }
                 else
                 {
@@ -125,12 +125,12 @@ namespace Figure2.Areas.Admin.Controllers
                 Response.StatusCode = 404;
                 return null;
             }
-          
+
             return View(slider);
         }
         [HttpPost]
         [ValidateInput(false)]
-        public ActionResult Edit(HttpPostedFileBase upload, int x, int y, int width, int height,FormCollection f)
+        public ActionResult Edit(HttpPostedFileBase upload, int x, int y, int width, int height, FormCollection f)
         {
             var slider = db.Sliders.SingleOrDefault(n => n.maHinh == int.Parse(f["maHinh"]));
             try
@@ -163,14 +163,13 @@ namespace Figure2.Areas.Admin.Controllers
                     {
                         if (upload != null)
                         {
-                           
-                          
+
+
                             if (!System.IO.File.Exists(croppedImagePath))
                             {
                                 upload.SaveAs(croppedImagePath);
                             }
                             slider.anh = sFileName;
-
                         }
 
                         db.SubmitChanges();
@@ -186,7 +185,7 @@ namespace Figure2.Areas.Admin.Controllers
             {
                 ViewBag.Message = $"Error: {ex.Message}";
             }
-            
+
             return View(slider);
         }
     }

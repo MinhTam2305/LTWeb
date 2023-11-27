@@ -1,0 +1,26 @@
+﻿@model Figure2.Models.Slider
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Slider</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Ảnh:
+        </dt>
+        <dd>
+            <img src="~/img/@Model.anh" alt=" @Model.maHinh">
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maHinh }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

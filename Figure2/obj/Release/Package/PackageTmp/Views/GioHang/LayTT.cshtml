@@ -7,46 +7,115 @@
 <br />
 <h3>Điền đầy đủ thông tin</h3>
 <br />
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-<div style="margin-left:50px" class="form-horizontal">
 
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        <label for="tenNguoiDung" class="form-label">Tên đầy đủ</label>
-        <input id="tenNguoiDung" name="tenNguoiDung" type="text" placeholder="" class="form-control">
-        <span class="form-message">@ViewBag.tenNguoiDung</span>
-    </div>
+    <div style="margin-left:50px" class="form-horizontal">
 
-    <div class="form-group">
-        <label for="email" class="form-label">Email</label>
-        <input id="email" name="email" type="text" placeholder="VD: figure@gmail.com" class="form-control">
-        <span class="form-message">@ViewBag.email </span>
-    </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <label for="tenNguoiDung" class="form-label">Tên đầy đủ</label>
+            <input id="tenNguoiDung" name="tenNguoiDung" type="text" placeholder="" class="form-control">
+            <span class="form-message">@ViewBag.tenNguoiDung</span>
+        </div>
 
-    <div class="form-group">
-        <label for="diaChi" class="form-label">
-            Địa chỉ
-        </label>
-        <input id="diaChi" name="diaChi" type="text" placeholder="" class="form-control">
-        <span class="form-message">@ViewBag.diaChi</span>
-    </div>
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input id="email" name="email" type="text" placeholder="VD: figure@gmail.com" class="form-control">
+            <span class="form-message">@ViewBag.email </span>
+        </div>
 
-    <div class="form-group">
-        <label for="email" class="form-label">So dien thoai</label>
-        <input id="sdt" name="sdt" type="text" placeholder="" class="form-control">
-        <span class="form-message">@ViewBag.sdt</span>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Lưu" class="btn btn-default" />
+        <div class="form-group">
+            <label for="diaChi" class="form-label">
+                Địa chỉ
+            </label>
+            <input id="diaChi" name="diaChi" type="text" placeholder="" class="form-control">
+            <span class="form-message">@ViewBag.diaChi</span>
+        </div>
+
+        <div class="form-group">
+            <label for="email" class="form-label">So dien thoai</label>
+            <input id="sdt" name="sdt" type="text" placeholder="" class="form-control">
+            <span class="form-message">@ViewBag.sdt</span>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu" class="btn btn-default" />
+            </div>
         </div>
     </div>
-</div>
 }
-
+<br />
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Về trang chủ", "Index")
 </div>
+<br />
+    <style >
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    h3 {
+        color: #333;
+    }
+
+    .form-horizontal {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    .form-label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .btn-default {
+        background-color: #428bca;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+        .btn-default:hover {
+            background-color: #3071a9;
+        }
+
+    .form-message {
+        color: #a94442;
+        font-size: 12px;
+    }
+
+    a {
+        color: #428bca;
+        text-decoration: none;
+    }
+
+        a:hover {
+            color: #3071a9;
+        }
+</style>
+

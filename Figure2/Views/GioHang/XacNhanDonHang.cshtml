@@ -4,11 +4,50 @@
     Layout = "~/Views/Shared/Layout.cshtml";
 }
 <br />
-<h4>Đơn hàng của quý khách đã được chúng tôi ghi nhận , chúng tôi sẽ liên hệ quý khách trong thời gian sớm nhất </h4>
-<p>
-    @Html.ActionLink("Thanh toán Online", "ThanhToanVnPay", "GioHang")
-</p>
+<div class="container">
+    <h4 class="h4">Đơn hàng của quý khách đã được chúng tôi ghi nhận, chúng tôi sẽ liên hệ quý khách trong thời gian sớm nhất. </h4>
+    <br />
+    <p class="p">
+        @Html.ActionLink("Thanh toán Online", "ThanhToanVnPay", "GioHang")
+    </p>
 
-<p>
-    @Html.ActionLink("Thanh toán khi nhân hàng", "ThanhToanKhiNhaHang", "GioHang")
-</p>
+    <p class="p">
+        @Html.ActionLink("Thanh toán khi nhân hàng", "ThanhToanKhiNhaHang", "GioHang")
+    </p>
+    </div>
+    <style>
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center; /* Center align contents */
+        }
+
+        .h4 {
+            color: #333;
+          
+        }
+
+        .p {
+            margin-top: 10px;
+        }
+
+            .p a {
+                display: inline-block;
+                padding: 10px 20px;
+                text-decoration: none;
+                color: #fff;
+                background-color: #007bff;
+                border-radius: 5px;
+                margin-right: 10px;
+            }
+
+                .p a:hover {
+                    background-color: #0056b3;
+                }
+    </style>

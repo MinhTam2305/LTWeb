@@ -1,0 +1,58 @@
+﻿@using Figure2.Models
+@using PagedList.Mvc;
+@model PagedList.PagedList<Figure2.Models.Product>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<div class="custom-dropdown">
+    <div class="dropdown-header" id="sortOptions">Sắp xếp</div>
+    <div class="dropdown-content">
+        <a href="@Url.Action("TangDan", "XemChiTietDanhMuc", new { id = @ViewBag.maDanhMuc })">Sắp xếp tăng dần</a>
+        <a href="@Url.Action("GiamDan", "XemChiTietDanhMuc", new { id = @ViewBag.maDanhMuc })">Sắp xếp giảm dần</a>
+    </div>
+</div>
+<section id="produce1" class="section-p1">
+    <div class="pro-container">
+        @foreach (var product in Model)
+        {
+            <div class="pro">
+                <a href="@Url.Action("ChiTietFigure", "Figure", new { id = product.maSanPham })">
+                    <img src="~/img/products/@product.anh" class="pro-1">
+                </a>
+                <div class="des">
+                    <span>@product.nhaXuatBan</span>                 
+                    <h5><a href="@Url.Action("ChiTietFigure", "Figure", new { id = product.maSanPham })">@product.tenSanPham</a></h5>
+                    <div class="start">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4><a href="@Url.Action("ChiTietFigure", "Figure", new { id = product.maSanPham })">@string.Format("{0:#,##0,0}", @product.gia)</a></h4>
+                </div>
+                <a href="@Url.Action("ThemGioHang","GioHang", new { ms = product.maSanPham, url =Request.Url.ToString() })">
+                    <i class="fal fa-shopping-cart cart"></i>
+                </a>
+            </div>
+        }
+    </div>
+
+    <div>
+        Trang @(Model.PageCount < Model.PageNumber ? 0 :Model.PageNumber)/@Model.PageCount
+        <div class="MenuTrang">
+            @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+        </div>
+    </div>
+
+</section>
+<script>
+    document.getElementById("sortOptions").onchange = function () {
+        var selectedOption = this.value;
+        if (selectedOption !== "#") {
+            window.location = selectedOption; // Chuyển hướng đến URL được chọn
+        }
+    };
+</script>
+@Styles.Render("~/Content/cssFIgure/ChiTiet.css")

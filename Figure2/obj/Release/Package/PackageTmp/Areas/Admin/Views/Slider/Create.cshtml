@@ -1,0 +1,72 @@
+﻿
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/LayoutAdmin.cshtml";
+}
+
+
+
+
+
+
+<form id="cropForm" method="post" action="@Url.Action("Create", "Slider")" enctype="multipart/form-data">
+    <input type="file" id="upload" name="upload" accept="image/*">
+    <img id="image" src="" alt="">
+    <input type="hidden" id="x" name="x" />
+    <input type="hidden" id="y" name="y" />
+    <input type="hidden" id="width" name="width" />
+    <input type="hidden" id="height" name="height" />
+    <button type="submit">Thêm</button>
+    @ViewBag.Message
+</form>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var image = document.getElementById('image');
+        var cropper;
+
+        document.getElementById('upload').addEventListener('change', function (e) {
+            var file = e.target.files[0];
+
+            if (file) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    image.src = e.target.result;
+
+                    if (cropper) {
+                        cropper.destroy();
+                    }
+
+                    cropper = new Cropper(image, {
+                        aspectRatio: 1590 / 542,
+                        viewMode: 2
+                    });
+
+
+                    document.querySelector('button').disabled = false;
+                    console.log('Button enabled');
+                };
+
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('cropForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            console.log('Form submitted');
+            var canvas = cropper.getCroppedCanvas();
+            document.getElementById('x').value = Math.round(cropper.getData().x);
+            document.getElementById('y').value = Math.round(cropper.getData().y);
+            document.getElementById('width').value = 1590;
+            document.getElementById('height').value = 542;
+            this.submit();
+        });
+        document.querySelector('button').addEventListener('click', function () {
+            console.log('Button clicked');
+        });
+    });
+</script>
+

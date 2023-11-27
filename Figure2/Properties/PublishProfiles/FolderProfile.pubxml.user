@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Users\tam20\Desktop\New folder</_PublishTargetUrl>
-    <History>True|2023-11-20T03:23:20.5117942Z;True|2023-11-17T01:37:24.3607990+07:00;</History>
+    <History>True|2023-11-27T06:03:31.4187057Z;False|2023-11-27T13:02:43.3480477+07:00;False|2023-11-27T13:01:41.7006780+07:00;False|2023-11-26T21:11:30.4847243+07:00;False|2023-11-26T21:11:18.6070550+07:00;True|2023-11-20T10:23:20.5117942+07:00;True|2023-11-17T01:37:24.3607990+07:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>

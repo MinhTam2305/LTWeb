@@ -23,8 +23,8 @@
 
 <body id="body-pd">
     <header class="header" id="header">
-        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
-        <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+      @*  <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+        <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>*@
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
@@ -57,6 +57,10 @@
                     <a href="@Url.Action("Index","DanhGia")" class="nav_link">
                         <i class='bx bx-bar-chart-alt-2 nav_icon'></i>
                         <span class="nav_name">Quản lý Đánh giá</span>
+                    </a>
+                    <a href="@Url.Action("Index","Slider")" class="nav_link">
+                        <i class='bx bx-message-square-detail nav_icon'></i>
+                        <span class="nav_name">Quản lý Danh Mục</span>
                     </a>
                 </div>
             </div>
@@ -113,4 +117,6 @@
     });
 </script>
 @Styles.Render("~/Content/PagedList.css")
+<link rel="stylesheet" href="https://unpkg.com/cropperjs/dist/cropper.min.css">
+<script src="https://unpkg.com/cropperjs/dist/cropper.min.js"></script>
 

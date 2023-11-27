@@ -11,6 +11,8 @@
     .thumbnail {
         cursor: pointer;
         transition: transform 0.2s;
+        width:120px;
+        height:135px;
     }
 
         .thumbnail:hover {
@@ -28,20 +30,13 @@
         <div class="col-md-4">
             <img src="~/img/products/@Model.anh" class="img-fluid main-image" />
             <div class="row mt-3">
-                <div class="col-4">
-                    <img src="~/img/products/@Model.anh" class="img-fluid thumbnail" onclick="changeImage(this)" alt="Hình nhỏ 1">
-                </div>
-                <div class="col-4">
-                    <img src="~/img/products/@Model.anh" class="img-fluid thumbnail" onclick="changeImage(this)" alt="Hình nhỏ 2">
-                </div>
-                <div class="col-4">
-                    <img src="~/img/products/@Model.anh" class="img-fluid thumbnail" onclick="changeImage(this)" alt="Hình nhỏ 3">
-                </div>
+                @Html.Action("danhMucHinhPatrial", "Figure",new {id=Model.maSanPham})
             </div>
         </div>
         <div class="col-md-8">
             <h2>Tên sản phẩm: @Model.tenSanPham</h2>
-            <p>Mô tả sản phẩm chi tiết: @Model.moTa</p>
+            <p style="color:black"><b>Chi tiết sản phẩm</b> @Html.Raw(@Model.moTa.ToString().Replace("\n", "</p><p>"))</p>
+            <p style="color:black">Số lượng: @Model.soLuong</p>
             <p>Giá: @string.Format("{0:#,##0,0}", Model.gia) VND</p>
             <div class="form-inline">
                 <a href="@Url.Action("ThemGioHang", "GioHang", new { ms = Model.maSanPham, url = Request.Url.ToString() })">

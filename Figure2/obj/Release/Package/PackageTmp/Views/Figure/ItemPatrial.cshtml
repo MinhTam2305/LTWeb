@@ -5,7 +5,7 @@
     <div class="dropdown-content">
         @foreach (var item in Model)
         {
-            <a href="@Url.Action("HangCoSan","Figure",new { id = item.maDanhMuc })"> @item.tenDanhMuc</a>
+            <a href="@Url.Action("index","XemChiTietDanhMuc",new { id = item.maDanhMuc })"> @item.tenDanhMuc</a>
         }
     </div>
 

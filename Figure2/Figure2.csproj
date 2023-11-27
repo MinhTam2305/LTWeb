@@ -1528,7 +1528,6 @@
     <Content Include="img\4.1.png" />
     <Content Include="img\4.png" />
     <Content Include="img\Anime Japanese Sunset Live Wallpaper.mp4" />
-    <Content Include="img\bgvscode.jpg" />
     <Content Include="img\button.png" />
     <Content Include="img\features\f1.png" />
     <Content Include="img\features\f2.png" />
@@ -2182,7 +2181,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Views\TrangTin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
